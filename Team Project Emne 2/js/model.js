@@ -28,7 +28,8 @@ const model = {
             },
         ],
 
-        inquiries: [ // Array for å lagre henvendelser sendt gjennom kontaktskjemaet
+        inquiries: [ 
+            // Array for å lagre henvendelser sendt gjennom kontaktskjemaet
             // Eksempel på henvendelse
             // {
             //     type: "Generell Forespørsel",
