@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/contactStyle.css">
+</head>
+<body>
+
+    <!-- header section -->
+    <header>
+        <div id="header-container">
+            <h1>Frida Foto</h1>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./about.html">About Me</a></li>
+                    <li><a href="./contact.html">Contact Me</a></li>
+                    <li><a href="./helppage.html">Help Page</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- main section -->
+    <main>
+        <!--<button> "Contact Info" </button>--> <!-- DISPLAY BUTTON -->
+        <!-- space -->
+        <div id="contact-info">
+            <h2>Forespørsler håndteres innen én time</h2>
+            <p>Bruk skjema, send mail eller ring oss direkte. Alle forespørsler håndteres innen en time i arbeidstiden vår (man-fre, 8-16).</p>
+            <p>Telefon: +47 4568 88 888</p>
+            <p>Email: Hello@fridaphoto.no</p>
+        </div>
+        <!-- space -->
+        <div id="contact-form">
+            <label for="inquiry">Hva kan vi hjelp deg med?</label>
+            <select name="inquiry" id="inquiry">
+                <option value="general"> Generalt</option>
+                <option value="kundeservice"> Kunde Serivce</option>
+                <option value="price"> prices issue</option>
+            </select>
+
+            <label for="details"> Utdyp med et par setninger: </label>
+            <textarea id="details" name="details" rows="4"></textarea>
+
+            <label for="firstName">Fornavn:</label>
+            <input type="text" id="firstName" name="firstName">
+
+            <label for="LastName">Etternavn:</label>
+            <input type="text" id="LastName" name="LastName">
+
+            <label for="email">Epost:</label>
+            <input type="text" id="email" name="email">
+
+            <button type="submit">Send forespørsel</button>
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+         <div id="footer-container">Footers
+            <ul>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact me</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="./js/model.js"></script>
+</body>
+</html>

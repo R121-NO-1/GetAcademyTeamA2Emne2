@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#contact-info {
+    border: 1px solid rgb(164, 68, 68);
+    padding: 20px;
+    width: 45%;
+}
+
+#contact-form {
+    /* form id display*/
+    border: 1px solid rgb(164, 68, 68);
+    padding: 20px;
+    width: 45%;
+
+    /* next display */
+    display: grid;
+    grid-gap: 10px;
+}
+
+#contact-form label {
+    margin-bottom: 5px;
+}
+
+#contact-form input, 
+#contact-form textarea, 
+#contact-form select, 
+#contact-form button {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#contact-form button {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

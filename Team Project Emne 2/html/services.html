@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services and Information</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/servicesStyles.css">
+</head>
+<body>
+
+    <!-- header section -->
+    <header>
+        <div id="header-container">
+            <h1>Frida Foto</h1>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./about.html">About Me</a></li>
+                    <li><a href="./contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- header section -->
+
+
+    <!-- main section -->
+    <main>
+
+ <!-- Normal View Without popups-->
+
+        <section class="Normal_View"> 
+        
+        <div id="textServicesPopout"> 
+                        <div id = Service1>
+            <p> Short Description </p>
+                <button onclick="on()"> Expand View </button>
+
+            </div>
+        </div>
+
+
+        <div id="textServicesPopout"></div>
+                         <div id = Service2>
+            <p> Short Description </p>
+            <button onclick="on()"> Expand View </button>
+                    
+            </div>
+        </div>
+
+
+        <div id="textServicesPopout"> 
+                        <div id = Service3>
+            <p> Short Description </p>
+            <button id> Expand View </button> <!--- Expand View / Open Overlay -->
+            </div>
+
+            </div>
+        </div>
+    
+    
+    </section>
+
+
+
+
+        <script> 
+// java script to move
+        function on() {
+            document.getElementById("Services_Popout").style.display="block";
+            document.getElementById("Normal_View").style.display="none";
+
+            console.log(OnOverlay)
+        };        
+        
+        
+        
+        function off() {
+            document.getElementById("Normal_View").style.display="none";
+            document.getElementById("Services_Popout").style.display="block";
+            console.log(OffOverlay)
+
+        }        
+        
+        
+        
+        
+        </script>
+
+
+        <!-- Popout version -->
+        <section class="Services_Popout">  <!--- Overlay Section -->
+        <button type="button"> im gay</button>
+            <div id="textServicesPopout"> 
+                            <div id = Service1>
+                <p> Description </p>
+                    <button> Order This </button>
+    
+                </div>
+            </div>
+    
+    
+            <div id="textServicesPopout"></div>
+                             <div id = Service2>
+                <p> Description </p>
+                    <button> Order This </button>
+                        
+                </div>
+            </div>
+    
+    
+            <div id="textServicesPopout"> 
+                            <div id = Service3>
+                <p> Description </p>
+                    <button> Order This </button>            
+                </div>
+                
+                </div>
+            </div>
+        </section>
+
+
+        
+
+
+
+
+
+
+    </main>
+    <!-- main section -->
+
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div id="footer-container">Footers
+            <ul>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact me</a></li>
+            </ul>
+        </div>
+    </footer>
+ <!-- Footer Section -->
+
+
+
+    <script src="./js/model.js"></script>
+</body>
+</html>
