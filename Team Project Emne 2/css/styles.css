@@ -82,8 +82,8 @@ footer {
 
 
 
-/* home button */
-#HomePage-Button {
+/* Header Buttons changed to transition with box shadow */
+#HeaderButton {
     background-color: #000;
     color: white;
     border: none;
@@ -94,22 +94,9 @@ footer {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#HomePage-Button:hover {
-    background-color: #5f615f;
+#HeaderButton:hover {
+    background-color: #5f615f
 }
-
-/*
-#ViewMore {
-    background-color: #000;
-    color: white;
-    border: none;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}*/
 
 #viewMore {
     background-color: #000;
