@@ -138,12 +138,78 @@ footer {
     transform: scale(1.1);
 }
 
-.gallery-slides img {
-    max-width: 100%; 
-    max-height: 100%; 
-    display: none; 
+/* Hide the gallery overlay by default */
+/* Thumbnail Styles */
+.thumbnail {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Added transition for smooth transformation */
 }
 
-.gallery-slides img:first-child {
+.gallery-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.gallery-slides {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+
+.gallery-slides img {
+    width: 100%; 
+    height: auto; 
+
+
+.gallery-slides img.large {
+    width: 80%; 
+    height: auto; 
+    margin: auto; 
     display: block; 
 }
+
+
+
+
+
+

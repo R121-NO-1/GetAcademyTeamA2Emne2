@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--Keep this Page and put the rest html pages -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,30 +29,30 @@
         
         <section id ="HomePage">
             <!-- Home Page Header Here-->
-        
             <h1 id ="h1" style="color:#eaa336">Welcome to Frida Foto!</h1>
             <p id ="p1" style="color:black;">Fotografi studio Based in OSLO <p>
             <p id ="p2"> Lorem ipsum dolor sit amet, consectetur adip <p>
-
-            <!--<a href="./services.html" id="ViewMore"> 
-                <button id="viewMore">View More</button> 
-            </a>-->
             <button id="viewMore">View More</button>
         </section>
 
-        <section>
+        <section id="gallerySection">
             <div class="gallery">
-                <img src="../Images/bilde1.jpg" alt="Image 1">
-                <img src="../Images/bilde2.jpg" alt="Image 2">
-                <img src="../Images/bilde3.jpg" alt="Image 3">
-                
+                <div class="gallery-item">
+                    <img src="../Images/bilde1.jpg" alt="Image 1" class="thumbnail" data-index="0">
+                </div>
+                <div class="gallery-item">
+                    <img src="../Images/bilde2.jpg" alt="Image 2" class="thumbnail" data-index="1">
+                </div>
+                <div class="gallery-item">
+                    <img src="../Images/bilde3.jpg" alt="Image 3" class="thumbnail" data-index="2">
+                </div>
             </div>
             <div class="gallery-overlay">
                 <span class="close-btn">&times;</span>
                 <div class="gallery-slides">
-                    <img src="../Images/bilde3.jpg" alt="Image 1">
+                    <img src="../Images/bilde1.jpg" alt="Image 1">
                     <img src="../Images/bilde2.jpg" alt="Image 2">
-                   
+                    <img src="../Images/bilde3.jpg" alt="Image 2">
                 </div>
                 <button class="prev-btn">&#10094;</button>
                 <button class="next-btn">&#10095;</button>
@@ -73,18 +73,8 @@
         </div>
     </footer>
 
-    <script>
-        const viewMoreButton = document.getElementById('viewMore');
-
-        document.addEventListener('DOMContentLoaded', function() {
-            viewMoreButton.addEventListener('click', function() {
-                window.location.href = './services.html';
-                console.log("this function works");
-            });
-        });
-    </script>
-
     <script src="../js/model.js"></script>
     <script src="../js/controller.js"></script>
+    <script src="../js/view.js"></script>
 </body>
 </html>

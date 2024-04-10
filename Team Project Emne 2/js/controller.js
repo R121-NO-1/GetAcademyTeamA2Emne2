@@ -1,50 +1,72 @@
+// global variables
+const thumbnails = document.querySelectorAll('.thumbnail');
+const galleryOverlay = document.querySelector('.gallery-overlay');
+const gallerySlides = document.querySelectorAll('.gallery-slides img');
+const viewMoreButton = document.getElementById('viewMore');
 
+// DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
-    const smallImages = document.querySelectorAll('.small-image');
-    const galleryOverlay = document.querySelector('.gallery-overlay');
-    const gallerySlides = document.querySelectorAll('.gallery-slides img');
     let currentSlide = 0;
 
-    // Attach click event listeners to small images for opening the gallery
-    smallImages.forEach((image, index) => {
-        image.addEventListener('click', function() {
+    viewMoreButton.addEventListener('click', function() {
+        window.location.href = '../html/services.html';
+    });
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+            const index = parseInt(thumbnail.getAttribute('data-index'));
             currentSlide = index;
-            showSlide();
-            galleryOverlay.style.display = 'block';
+            toggleThumbnailSize(thumbnail); // Toggle size
+            showGalleryOverlay();
         });
     });
 
-    // Close gallery overlay when clicking outside the slides
-    galleryOverlay.addEventListener('click', function(e) {
-        if (e.target.classList.contains('gallery-overlay')) {
-            galleryOverlay.style.display = 'none';
-        }
-    });
+    document.querySelector('.close-btn').addEventListener('click', hideGalleryOverlay);
+    document.querySelector('.prev-btn').addEventListener('click', prevSlide);
+    document.querySelector('.next-btn').addEventListener('click', nextSlide);
 
-    // Navigate to previous slide
+    function toggleThumbnailSize(thumbnail) {
+        thumbnail.classList.toggle('large'); // Toggle 'large' class
+    }
+
+    function showGalleryOverlay() {
+        galleryOverlay.style.display = 'block';
+        showSlide();
+    }
+
+    function hideGalleryOverlay() {
+        galleryOverlay.style.display = 'none';
+    }
+
     function prevSlide() {
         currentSlide = (currentSlide - 1 + gallerySlides.length) % gallerySlides.length;
         showSlide();
     }
 
-    // Navigate to next slide
     function nextSlide() {
         currentSlide = (currentSlide + 1) % gallerySlides.length;
         showSlide();
     }
 
-    // Show current slide
     function showSlide() {
         gallerySlides.forEach(slide => slide.style.display = 'none');
         gallerySlides[currentSlide].style.display = 'block';
     }
 
-    // Event listeners for navigation buttons
-    document.querySelector('.prev-btn').addEventListener('click', prevSlide);
-    document.querySelector('.next-btn').addEventListener('click', nextSlide);
+    // part 2 of gallery
+    // joakim det er meg gjøre dette (levi)
+    const expandButton = document.getElementById('expandButton');
+    const expandedContent = document.getElementById('expandedContent');
 
-    // Show first slide initially
-    showSlide();
+    expandButton.addEventListener('click', function() {
+        if (expandedContent.style.display === 'none') {
+            expandedContent.style.display = 'block';
+            expandButton.textContent = 'Collapse View';
+        } else {
+            expandedContent.style.display = 'none';
+            expandButton.textContent = 'Expand View';
+        }
+    });
 });
 
 
