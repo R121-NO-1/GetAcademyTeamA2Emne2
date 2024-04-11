@@ -65,7 +65,7 @@
         -->
         <div class="faq-container">
             <h1>Frequently asked quetions F.A.Q</h1>
-            
+
             <details class="faq-item">
                 <summary>Why is the moon sometimes out during the day?</summary>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -114,6 +114,24 @@
         </div>
     </footer>
 
+    <script>
+        function closeDetails(index, details) {
+            for (let i = 0; i < details.length; ++i) {
+                if (i === index) { continue; }
+                details[i].open = false;
+            }
+        }
+
+        function openDetails() {
+            const details = document.querySelector('details');
+
+            for (let i = 0; i < details.length; ++i) {
+                details[i].addEventListener('toggle', (event) => {
+                    closeDetails(i, details);
+                });
+            }
+        }
+    </script>
     <script src="./js/model.js"></script>
 </body>
 </html>
