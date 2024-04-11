@@ -31,62 +31,66 @@
 
  <!-- Normal View Without popups-->
 
-        <section class="Normal_View"> 
-        
-        <div id="textServicesPopout"> 
-                        <div id = Service1>
-            <p> Short Description </p>
-                <button onclick="on()"> Expand View </button>
-
+ <section class="Normal_View"> 
+    <div class="textServicesPopout"> 
+        <div class="service">
+            <p>Short Description 1</p>
+            <button class="expandButton">Expand View</button>
+            <div class="expandedContent">
+                <!-- Content to be expanded -->
+                <p>This is the expanded content for Service 1.</p>
             </div>
         </div>
+    </div>
 
-
-        <div id="textServicesPopout"></div>
-                         <div id = Service2>
-            <p> Short Description </p>
-            <button onclick="on()"> Expand View </button>
-                    
+    <div class="textServicesPopout"> 
+        <div class="service">
+            <p>Short Description 2</p>
+            <button class="expandButton">Expand View</button>
+            <div class="expandedContent">
+                <!-- Content to be expanded -->
+                <p>This is the expanded content for Service 2.</p>
             </div>
         </div>
+    </div>
 
-
-        <div id="textServicesPopout"> 
-                        <div id = Service3>
-            <p> Short Description </p>
-            <button id> Expand View </button> <!--- Expand View / Open Overlay -->
-            </div>
-
+    <div class="textServicesPopout"> 
+        <div class="service">
+            <p>Short Description 3</p>
+            <button class="expandButton">Expand View</button>
+            <div class="expandedContent">
+                <!-- Content to be expanded -->
+                <p>This is the expanded content for Service 3.</p>
             </div>
         </div>
-    
-    
-    </section>
+    </div>
+</section>
 
 
 
 
-        <script> 
-// java script to move
-        function on() {
-            document.getElementById("Services_Popout").style.display="block";
-            document.getElementById("Normal_View").style.display="none";
 
-            console.log(OnOverlay)
-        };        
-        
-        
-        
-        function off() {
-            document.getElementById("Normal_View").style.display="none";
-            document.getElementById("Services_Popout").style.display="block";
-            console.log(OffOverlay)
 
-        }        
-        
-        
-        
-        
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const expandButtons = document.querySelectorAll('.expandButton');
+
+    expandButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const expandedContent = button.nextElementSibling;
+            if (expandedContent.style.display === 'none' || expandedContent.style.display === '') {
+                expandedContent.style.display = 'block';
+                button.classList.add('large'); // Add the 'large' class to make the button bigger
+                button.textContent = 'Collapse View';
+            } else {
+                expandedContent.style.display = 'none';
+                button.classList.remove('large'); // Remove the 'large' class to revert to original size
+                button.textContent = 'Expand View';
+            }
+        });
+    });
+});
+
         </script>
 
 

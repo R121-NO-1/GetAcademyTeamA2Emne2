@@ -1,0 +1,84 @@
+/*
+        <div class="faq-container">
+            <h1>Frequently asked quetions test</h1>
+            <!-- first quetions layout
+                add class into details tags to make css design
+            -->
+            <details class="faq-item">
+                <!-- <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Why is the sky blue?</span><span class="icon" aria-hidden="true"></span></button> 
+                <summary> already have dropdown functions - HTML5 syntaks.
+                -->
+                <summary>Why is the moon sometimes out during the day?</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Why is the sky blue?</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>will we ever discover aliens?</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+            </details>
+
+            <!-- add more details -->
+
+        </div>
+*/
+/* ? */
+/*
+* {
+    margin: 0;
+    padding: 0;
+}*/
+
+main {
+    font-family: Arial, Helvetica, sans-serif; /* for testing */
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+
+    /* test */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.faq-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(red, green, blue, alpha);
+    border-radius: 8px;
+}
+
+.faq-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333333;
+}
+
+.faq-item {
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.faq-item summary {
+    font-size: 1.2rem;
+    color: #333333;
+    cursor: pointer;
+}
+
+.faq-item summary::after {
+    content: '\25B6';
+    float: right;
+    
+}

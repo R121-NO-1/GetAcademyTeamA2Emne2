@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support and Help</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/helpStyle.css">
 </head>
 <body>
 
@@ -22,38 +23,76 @@
             </nav>
         </div>
     </header>
-    <!-- header section -->
-
 
     <!-- main section -->
     <main>
-        
-        <section id ="Help_1BOX">
-            <h1> Help </h1>
-            <button> "HELP" </button> <!-- DISPLAY BUTTON -->
-          
-            <p> lorem ipsum  </p>
+        <!--
+            <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why is the moon sometimes out during the day?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Why is the sky blue?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Will we ever discover aliens?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How much does the Earth weigh?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How do airplanes stay up?</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        -->
+        <div class="faq-container">
+            <h1>Frequently asked quetions test</h1>
+            <!-- first quetions layout
+                add class into details tags to make css design
+            -->
+            <details class="faq-item">
+                <!-- <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Why is the sky blue?</span><span class="icon" aria-hidden="true"></span></button> 
+                <summary> already have dropdown functions - HTML5 syntaks.
+                -->
+                <summary>Why is the moon sometimes out during the day?</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+            </details>
 
-         
-        
-        </section>
+            <details class="faq-item">
+                <summary>Why is the sky blue?</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>will we ever discover aliens?</summary>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+            </details>
 
 
-        <section id ="Help_2BOX">
-            
-            <h1> Help </h1>
-            <button> "HELP" </button> <!-- DISPLAY BUTTON -->
-            
-            <p> lorem ipsum  </p>
 
-         
-        
-        </section>
-
+        </div>
     </main>
- <!-- main section -->
-
-
 
     <!-- Footer Section -->
     <footer>
@@ -65,8 +104,6 @@
             </ul>
         </div>
     </footer>
-  <!-- Footer Section -->
-
 
     <script src="./js/model.js"></script>
 </body>
