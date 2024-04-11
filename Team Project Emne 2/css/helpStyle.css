@@ -78,6 +78,19 @@ main {
     color: #666666;
 }
 
+/* hide summary arrows */
+details summary {
+    list-style: none;
+    cursor: none;
+    position: relative;
+}
+
+details summary::-webkit-detais-marker {
+    display: none;
+}
+
+/* hide summary arrows end */
+
 .faq-item summary {
     font-size: 1.2rem;
     color: #333333;
