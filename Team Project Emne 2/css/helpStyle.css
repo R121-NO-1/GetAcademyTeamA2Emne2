@@ -37,7 +37,7 @@
 }*/
 
 main {
-    font-family: Arial, Helvetica, sans-serif; /* for testing */
+    font-family: Arial, sans-serif; /* for testing */
     background-color: #ffffff;
     margin: 0;
     padding: 0;
@@ -71,14 +71,28 @@ main {
     padding-bottom: 1rem;
 }
 
+/* <p> */
+.faq-item p {
+    padding: 1rem 0;
+    line-height: 1.6;
+    color: #666666;
+}
+
 .faq-item summary {
     font-size: 1.2rem;
     color: #333333;
     cursor: pointer;
 }
 
+/* animation arrow (click on it onces arrow up */
 .faq-item summary::after {
-    content: '\25B6';
+    content: '\25B6'; /*unicode from google (arrow)*/
     float: right;
-    
+    transform: rotate(90deg); /* rotation arrow to 90 degres*/
+    transition: transform 0.3s ease;
+}
+
+/* animation arrow (click on it one more time arrow down */
+.faq-item[open] summary::after {
+    transform: rotate(-90deg); /* rotation arrow to -90 degres*/
 }
