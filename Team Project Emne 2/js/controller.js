@@ -12,6 +12,28 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '../html/services.html';
     });
 
+    openDetails();
+
+    function closeDetails(index, details) {
+        for (let i = 0; i < details.length; ++i) {
+            if (i === index) { continue; }
+    
+            details[i].open = false;
+        }
+    }
+    
+    function openDetails() {
+        const details = document.querySelectorAll('details');
+    
+        for (let i = 0; i < details.length; ++i) {
+            details[i].addEventListener('toggle', function() {
+                if (details[i].open) {
+                    closeDetails(i, details);
+                }
+            });
+        }
+    }
+
     thumbnails.forEach(thumbnail => {
         thumbnail.addEventListener('click', function() {
             const index = parseInt(thumbnail.getAttribute('data-index'));
@@ -68,9 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
-
 
 
 
