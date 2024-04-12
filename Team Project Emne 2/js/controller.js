@@ -52,21 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
         gallerySlides.forEach(slide => slide.style.display = 'none');
         gallerySlides[currentSlide].style.display = 'block';
     }
-
-    // part 2 of gallery
-    // joakim det er meg gjøre dette (levi)
-    const expandButton = document.getElementById('expandButton');
-    const expandedContent = document.getElementById('expandedContent');
-
-    expandButton.addEventListener('click', function() {
-        if (expandedContent.style.display === 'none') {
-            expandedContent.style.display = 'block';
-            expandButton.textContent = 'Collapse View';
-        } else {
-            expandedContent.style.display = 'none';
-            expandButton.textContent = 'Expand View';
-        }
-    });
 });
 
 
