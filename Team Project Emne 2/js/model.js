@@ -1,3 +1,4 @@
+
 const model = {
     app: {
         currentPage: "contact" // antar at "contact" er den nåværende siden; dette kan settes dynamisk
@@ -59,6 +60,15 @@ const model = {
             },
             // ... more services ...
         ],
+        
+        contactInfo: {
+            phone_Number: "+47 4568 88 888",
+            email: "hifridafoto@gmail.com"
+
+        
+        
+        },
+    
     }
 };
 
