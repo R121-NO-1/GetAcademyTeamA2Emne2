@@ -13,10 +13,6 @@
         `;
         
         app.innerHTML = contactForm;
-   
-   
-   
-   
     }
 
 
@@ -25,8 +21,9 @@
 
 
 
-
-
     document.addEventListener('DOMContentLoaded', function() {
         updateView();
     })
+
+
+   
