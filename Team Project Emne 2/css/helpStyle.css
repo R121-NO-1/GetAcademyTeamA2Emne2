@@ -71,3 +71,14 @@ details summary::-webkit-detais-marker {
 .faq-item[open] summary::after {
     transform: rotate(-90deg); /* rotation arrow to -90 degres*/
 }
+
+
+
+.boxes_container {
+    width: 300px;
+    margin: auto;
+}
+
+.gallery_container {
+
+}
