@@ -42,17 +42,15 @@ main {
 /*      header end    */
 
 
-/* #paragraphText-2-3 {
-    font-size: 16px;
-
-} */
-
-#p1 {
-    font-size: 23px;
+.welcome-text {
+    margin-top: 20px;
+    font-size: 18px;
 }
 
-#p2, #p3 {
-    font-size: 18px;
+.description p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 
@@ -98,7 +96,7 @@ footer {
 
 
 /* Header Buttons changed to transition with box shadow */
-#HeaderButton {
+.header-button {
     background-color: #000;
     color: white;
     border: none;
@@ -109,7 +107,7 @@ footer {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#HeaderButton:hover {
+.header-button:hover {
     background-color: #5f615f
 }
 
