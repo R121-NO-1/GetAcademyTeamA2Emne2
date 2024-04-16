@@ -32,7 +32,7 @@ body, html {
 
 .service-item {
   margin: 15px;
-  flex: 0 1 calc(25% - 30px); /* 25 % percent minus the margin */
+  flex: 0 1 calc(20% - 30px); /* 18 % percent minus the margin */
   max-width: 250px; /* max width of each item picture */
   position: relative;
   overflow: hidden;
@@ -61,7 +61,7 @@ body, html {
   display: inline-block;
 }
 
-/*.overlay {
+.overlay {
   position: absolute;
   bottom: 0;
   background: rgba(255, 193, 7, 0.8);
@@ -73,7 +73,7 @@ body, html {
   font-size: 15px;
   padding: 20px;
   text-align: center;
-}*/
+}
 
 .service-item:hover .overlay {
   opacity: 1;
