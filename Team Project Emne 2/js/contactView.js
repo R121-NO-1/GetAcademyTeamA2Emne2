@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const app = document.getElementById('contact-info');
 
-    function updateView() {
+    function contactInfoView() {
         const email = model.data.contactInfo.email;
         const phone = model.data.contactInfo.phone_Number;
 
@@ -16,5 +16,5 @@ document.addEventListener('DOMContentLoaded', function() {
         app.innerHTML = contactForm;
     }
 
-    updateView();
+   contactInfoView();
 });
