@@ -1,10 +1,121 @@
 <!DOCTYPE html>
 <html lang="NO">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Management</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const app = document.getElementById('app');
 
-    
-    
+            // model
+            const model = {
+                inputs: {
+                    pokemons: [
+                        {
+                            number: '',
+                            name: '',
+                            image: '',
+                            type: "",
+                            funFact: ""
+                        }
+                    ]
+                },
+
+                data : {
+                    pokemons: [
+                        {                            
+                            number: '001',
+                            name: 'Charmander',
+                            image: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Charmander.png',
+                            type: "Fire",
+                            funFact: "Charmander is known for the flame on its tail, which burns brighter as it grows."
+                        },
+
+                        {                            
+                            number: '002',
+                            name: 'Pikachu',
+                            image: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Charmander.png',
+                            type: "Light",
+                            funFact: "Pikachu is known for the flame on its tail, which burns brighter as it grows."
+                        }
+                    ]
+                }
+            };
+
+            // view
+
+            function updateView() {
+                let html = `
+                    <h1>Pokemon List</h1>
+                    ${showPokemoens()}
+                    ${updatePokemonsView()}
+                `;
+
+                app.innerHTML = html;
+
+                const addPokemon = document.getElementById("add-pokemon");
+                addPokemon.addEventListener('click', function() {
+                    addPokemoen();
+                });
+            }
+
+            function updatePokemonsView() {
+                let html = `
+                    <div>
+                        <input type="text" id="number" placeholder="Number" required>
+                        <input type="text" id="name" placeholder="Name" required>
+                        <input type="text" id="image" placeholder="Image URL" required>
+                        <input type="text" id="type" placeholder="Type" required>
+                        <input type="text" id="funFact" placeholder="Fun Fact" required>
+                        <button type="button" id="add-pokemon">Add Pokemon</button>
+                    </div>
+                `;
+
+                return html;
+            }
+
+            // controller
+
+            function addPokemoen() {
+                let number = document.getElementById('number').value;
+                let name = document.getElementById('name').value;
+                let image = document.getElementById('image').value;
+                let type = document.getElementById('type').value;
+                let funFact = document.getElementById('funFact').value;
+
+                let newPokemon = {number, name, image, type, funFact};
+                model.inputs.pokemons.push(newPokemon);
+                console.log(newPokemon);
+
+                updateView();
+            }
+
+            function loadedPokemoen(array) {
+                model.data.pokemons.push(array);
+            }
+
+            function showPokemoens() {
+                let pokemons_data = model.data.pokemons;
+                let html = `<br>`;
+                for (let i = 0; i < pokemons_data.length; i++) {
+                    html += `<p>Name: ${pokemons_data[i].name}</p>
+                             <p>Number: ${pokemons_data[i].number}</p>
+                             <p>image: ${pokemons_data[i].image}</p>
+                             <p>Type: ${pokemons_data[i].type}</p>
+                             <p>funFact: ${pokemons_data[i].funFact}</p>
+                    `;
+                }
+
+                return html;
+            }
+            
+            //showPokemoens();
+            updateView();
+        });
+    </script>
+</body>
 </html>
