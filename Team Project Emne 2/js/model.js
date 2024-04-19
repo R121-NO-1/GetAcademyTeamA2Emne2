@@ -5,6 +5,7 @@ const model = {
     },
 
     input: {
+        // null set 
         contactPage: {
             inquiry: "", // Tilsvarer nedtrekksmenyen for type forespørsel
             details: "", // Tilsvarer tekstområdet for flere detaljer

@@ -1,0 +1,44 @@
+/*<div id="about-frida">
+<p>About frida Photography Welcome to frida Photography</p>
+<div class="photo-grid">
+    <img src="../Images/bilde1.jpg" alt="Photo" style="width: 250px; height: auto;">
+    <img src="../Images/bilde1.jpg" alt="Photo" style="width: 250px; height: auto;">
+    <img src="../Images/bilde1.jpg" alt="Photo" style="width: 250px; height: auto;">
+
+</div>
+
+<p>Based in location im avaliable for Photography sessions worldwide.</p>
+<p>Thank you for considering Frida's Photography!</p>
+<p>[phone number] [email]</p>
+
+<div class="map-container">
+    <img src="map-placeholder.jpg" alt="Map">
+</div>
+</div>
+
+<aside>
+<img src="frida-portait.jpg" alt="Photo of Frida">
+<h2>Frida Foto</h2>
+<div class="services-offered">
+    <p>Portrait photography
+    </p>
+
+    <p>Event photography
+
+    </p>
+
+    <p>Commercial photography
+
+    </p>
+</div>
+</aside>*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}

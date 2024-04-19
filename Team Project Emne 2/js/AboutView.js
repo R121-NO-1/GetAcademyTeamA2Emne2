@@ -19,6 +19,13 @@ function updateView() {
 
 
 
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     updateView();
 })
