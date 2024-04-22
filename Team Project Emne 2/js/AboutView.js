@@ -60,17 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let html = /*HTML*/
             `<div class="map-container">
-            <iframe width="100%"
-                    height="300"
-                    style="border: none;"
-                    loading="lazy"
-                    allowfullscreen
-                    src="${aside_frida_google_url}"
-                    frameborder="0"
-                    aria-hidden="false"
-                    tabindex="0">
-            </iframe>
-        </div>`;
+                <iframe class="map-iframe"
+                        src="${aside_frida_google_url}">
+                </iframe>
+            </div>
+        `;
         return html;
     }
 

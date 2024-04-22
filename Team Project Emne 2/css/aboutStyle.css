@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
-/* Basic reset */
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
@@ -66,11 +65,17 @@ main {
     overflow: hidden;
 }
 
-.map-container iframe {
+.map-iframe {
     width: 100%;
-    height: 450px;
-    border: none;
+    height: 300px;
+    border: none; /* 去除边框 */
+    loading: lazy; /* 懒加载 */
+    allowfullscreen: true; /* 允许全屏 */
+    frameborder: 0; /* 去除边框 */
+    aria-hidden: false; /* 无障碍可见性 */
+    tabindex: 0; /* 可聚焦 */
 }
+
 
 /* Sidebar/Profile Styles */
 #aside-view {
