@@ -65,26 +65,37 @@ const model = {
         contactInfo: {
             phone_Number: "+47 4568 88 888",
             email: "hifridafoto@gmail.com"
+        },
 
-        
-        
+        // about me model
+        aboutFrida: {
+            introduction: "About Frida Foto, Welcome to frida Photography",
+            location: 'Based in location I m avaliable for Photography sessions in Larvik.',
+            thanksNote: 'Takk for at du velger Frida Foto sin fotografi!',
+            telefonNumber: '+47 481 000 00',
+            fridaEmail: 'fridaphoto@fridaphoto.no',
+
+            images: [           
+                '../Images/bilde1.jpg',
+                '../Images/bilde2.jpg', 
+                '../Images/bilde3.jpg'
+            ]
+        },
+
+        asideFrida: {
+            porttraitSrc: 
+            '../Images/WEDDING.png',
+
+            services: [
+                'Portrait photography',
+                'Event photography',
+                'Commercial photography'
+            ],
+
+            googleMapURL: 
+            'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.994943748292!2d10.036383516039728!3d59.049996699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4646e944c5dc2eb9%3A0x32fe0474495a5b34!2sGET%20Academy%20AS%20-%20Norges%20r%C3%A5este%20IT-oppl%C3%A6ring!5e0!3m2!1sen!2sno!4v1597848556439!5m2!1sen!2sno'
+            
         }
-    
     }
 };
-
-
-//controller
-// function inputthing(){
-//     model1.input.contactPage.firstName = document.getElementById('input').value
-//     model1.data.contactUser.email = // ?
-//     let kompis = {
-//             firstName: document.getElementById('input').value,
-//             lastName: "",
-//             email: ""
-//     }
-  
-//     model1.data.user.push(kompis)
-    
-// }
 
