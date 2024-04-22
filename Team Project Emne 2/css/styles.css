@@ -2,43 +2,81 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body, html {
-    height: 100%; 
-    font-family: 'Arial', sans-serif;
-    font-size: 17px;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 /*  HTML- og BODY-elementene end  */
-
-/*      header start    */
-header {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-#main-nav ul {
-    list-style-type: none;
-}
-
-#main-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-#main-nav a {
-    color: white;
-    text-decoration: none;
-}
 
 main {
     display: flex;
     justify-content: space-around;
     padding: 20px;
     background-color: white;
-    
+}
+
+/*      header start    */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Or any other color you prefer */
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar-logo img {
+    height: 40px; /* Adjust size as needed */
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px; /* Space out the nav links */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: #555; /* Hover effect for links */
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-actions input {
+    margin-right: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.navbar-actions button {
+    background-color: #007bff; /* Adjust button color as needed */
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar-actions button:hover {
+    background-color: #0056b3; /* Hover effect for buttons */
 }
 /*      header end    */
 
@@ -97,21 +135,6 @@ footer {
 
 
 /* Header Buttons changed to transition with box shadow */
-.header-button {
-    background-color: #000;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    font-size: 14px;    
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header-button:hover {
-    background-color: #5f615f
-}
-
 #viewMore {
     background-color: #000;
     color: white;
@@ -225,4 +248,15 @@ footer {
 .buttons-container {
     display: inline-block;
     margin: 10px;
+}
+
+/* Additional responsiveness if needed */
+@media screen and (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+    }
+
+    .navbar-links, .navbar-actions {
+        margin-top: 10px;
+    }
 }

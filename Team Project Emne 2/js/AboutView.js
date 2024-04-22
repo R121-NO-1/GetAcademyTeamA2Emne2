@@ -1,7 +1,7 @@
 const about_frida = document.getElementById('about-frida-view');
 const aside_view = document.getElementById('aside-view');
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     updateAboutFridaView();
     updateAsideView();
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let html = /*HTML*/ `
         ${photoGridHtml()}
         ${aboutFridaHtml()}
-        ${googleMapHtml()}` 
+        ${googleMapHtml()}`
         about_frida.innerHTML = html;
     }
 
@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (let i = 0; i < photo_grid_images.length; i++) {
             photo_html += `
-                <div id="abtimage-${i + 1}">
+                <div>
                     <img src="${photo_grid_images[i]}" alt="Photo">
                 </div>
             `;
         }
 
-        let html =  `
+        let html = `
             <p>${introduction}</p>
             <div class="photo-grid">
                 ${photo_html}
@@ -57,11 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function googleMapHtml() {
         const aside_frida_google_url = model.data.asideFrida.googleMapURL;
-        
+
         let html = /*HTML*/
-        `<div class="map-container">
+            `<div class="map-container">
             <iframe width="100%"
-                    height="450"
+                    height="300"
                     style="border: none;"
                     loading="lazy"
                     allowfullscreen
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function fridaAboutServicesHtml() {
         const frida_aside_services = model.data.asideFrida.services;
-        const services = frida_aside_services.map(src => 
+        const services = frida_aside_services.map(src =>
             `<li>${src}</li>`
         ).join('');
 
