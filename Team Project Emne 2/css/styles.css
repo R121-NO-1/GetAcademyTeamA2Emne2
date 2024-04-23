@@ -26,6 +26,10 @@ header {
     padding: 10px 20px;
 }
 
+#orderMenu {
+    background-color: #777575
+}
+
 #navbar {
     display: flex;
     justify-content: space-between;
