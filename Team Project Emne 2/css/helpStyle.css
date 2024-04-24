@@ -1,5 +1,5 @@
 /* 基本重置和全局样式 */
-* {
+main {
     margin: 0;
     padding: 0;
     box-sizing: border-box;

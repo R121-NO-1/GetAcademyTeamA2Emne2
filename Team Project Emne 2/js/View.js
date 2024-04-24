@@ -4,8 +4,6 @@ const homePageGallery = document.getElementById("gallerySection");
 function updateHomePage() {
     let html = /*HTML*/ `
     ${welcomeHtml()}
-    ${descriptionHtml()}
-    ${viewmoreHtml()}
     `
     homePage.innerHTML = html;
 }
@@ -14,11 +12,20 @@ function welcomeHtml() {
     const welcome = model.data.homePage.welcome;
     const photograph = model.data.homePage.fotograph;
 
-    let html = /*HTML*/ `
-        <h1 style="color:black">${welcome}</h1>
-        <p class="welcome-text">${photograph}</p>
-    `;
+    const description = model.data.homePage.description;
+    let describe_html = description.map(src =>
+        `<p>${src}</p>`
+    ).join('');
 
+    let html = /*HTML*/ `
+        <section class="welcome-section">
+            <h1>${welcome}</h1>
+            <h2>${photograph}</h2>
+
+            ${describe_html}
+            ${viewmoreHtml()}
+        </section>
+    `;
     return html;
 }
 
@@ -71,7 +78,7 @@ function updateHomePageGallery() {
 
 function galleryHtml() {
     let html = /*HTML*/ ``;
-    
+
 }
 
 document.addEventListener('DOMContentLoaded', function () {

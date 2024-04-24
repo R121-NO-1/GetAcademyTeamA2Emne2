@@ -46,7 +46,7 @@ header {
 }*/
 
 .navbar-logo img {
-    width: 100px;
+    width: 85px;
     height: auto;
 }
 
@@ -92,56 +92,119 @@ header {
 /*      header end    */
 
 
-.welcome-text {
-    margin-top: 20px;
-    font-size: 18px;
+.welcome-section {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center; 
+    padding: 50px; 
+    background-color: #f8f8f8; 
+    margin: 0 auto; 
+    max-width: 800px; 
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), /* first line of shadow */
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);  /* second lines of shaow box*/
 }
 
-.description p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 10px;
+.welcome-section h1 {
+    font-size: 2.5rem; 
+    color: #333; 
+    margin-bottom: 20px; 
 }
 
+.welcome-section h2 {
+    font-size: 1.8rem; 
+    color: #555; 
+    margin-bottom: 30px; 
+}
+
+.welcome-section p {
+    color: #666; 
+    font-size: 1rem; 
+    line-height: 1.6; 
+    margin-bottom: 10px; 
+}
 
 /*      footer start    */
-footer {
-    background-color: #000;
-    color: #f4f4f4;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+.site-footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    font-family:'Courier New', Courier, monospace;
+    line-height: 1.6;
 }
 
-#footer-container ul {
-    list-style: none;
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.logo-area h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.logo-area p {
+    margin: 0;
+}
+
+.footer-nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
-#footer-container li {
-    display: inline;
-    margin-right: 20px;
+.footer-nav ul li {
+    padding: 0.5em 0;
 }
 
-#footer-container li:last-child {
-    margin-right: 0;
-}
-
-#footer-container li a {
-    color: #ffffff;
+.footer-nav ul li a {
+    color: white;
     text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-#footer-container li a:hover {
-    color: #007bff;
+.footer-nav ul li a:hover {
+    color: #1da1f2;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 0.9em; /* font sizes */
+    color: #fff;
+    background-color: #333; 
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-links a {
+    margin-right: 10px; 
+    color: #fff; 
+    text-decoration: none; 
+}
+
+.social-links a:last-child {
+    margin-right: 0; 
+}
+
+.social-links i {
+    font-size: 1.5em; /* FontAwesome sosial icon size */
+}
+
+.social-links span {
+    font-size: 1.5em;
+}
+
+.copy-right {
+    font-size: 0.9em;
+    text-align: center;
 }
 /*      footer end    */
-
 
 
 
@@ -154,7 +217,7 @@ footer {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 18px;
 
     text-align: center;
     text-decoration: none;
@@ -173,6 +236,8 @@ footer {
 
 .gallery-item {
     width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .gallery-item img {
@@ -184,7 +249,9 @@ footer {
 
 .gallery-item img:hover {
     transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
+
 
 /* Hide the gallery overlay by default */
 /* Thumbnail Styles */
@@ -261,7 +328,7 @@ footer {
     margin: 10px;
 }
 
-/* Additional responsiveness if needed */
+/* responsiveness */
 @media screen and (max-width: 768px) {
     #navbar {
         flex-direction: column;
@@ -269,5 +336,43 @@ footer {
 
     .navbar-links, .navbar-actions {
         margin-top: 10px;
+    }
+
+    .welcome-section h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-section p {
+        font-size: 0.9rem;
+    }
+
+    /* footers */
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav {
+        text-align: center;
+    }
+
+    .footer-nav ul {
+        margin-bottom: 20px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-bottom: 10px;
+    }
+
+    .copy-right {
+        text-align: center;
     }
 }

@@ -33,12 +33,15 @@ const model = {
 
         homePage: {
             welcome: 'Velkommen til Frida Foto!',
-            fotograph: 'Fotografi Studio Basert i Oslo',
+            fotograph: 'Et profesjonelt fotografi studio basert i hjertet av Oslo',
 
             description: [
-                'Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.',
-                'Aliqu diam amet diam et eos.',
-                'Clita erat ipsum et lorem et sit. Sed stet lorem sit clita duo. Justo magna dolore erat amet.'
+                'Hvor vi med stor lidenskap for kunsten å fange øyeblikk, ',
+                'Tilbyr et bredt spekter av fototjenester',
+                'Enten det gjelder å forevige minner gjennom portrettfotografering.',
+                'Fange følelsesladde øyeblikk under bryllup,',
+                'Eller skape kunstneriske verk for kommersiell bruk, ',
+                'Streber vi etter å levere bilder som både er elitr og inneheldende den unike essensen av hvert eneste øyeblikk.'
             ],
 
             viewmore: "Se mer",
