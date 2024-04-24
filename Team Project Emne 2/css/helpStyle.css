@@ -1,4 +1,4 @@
-/* 基本重置和全局样式 */
+
 main {
     margin: 0;
     padding: 0;
@@ -12,7 +12,6 @@ main .help-container {
     height: 100%;
 }
 
-/* 帮助中心的头部 */
 .help-header {
     background: url('../Images/Ultra-Wide-Angle-Panoramas-1.jpg') no-repeat center center;
     background-size: cover;
@@ -22,71 +21,68 @@ main .help-container {
 }
 
 .help-header h1 {
-    font-size: 3em; /* 调整大小以符合设计 */
-    margin-bottom: 0.5em; /* 为标题之间添加一些间距 */
+    font-size: 3em; 
+    margin-bottom: 0.5em; 
 }
 
 .help-header h2 {
     font-size: 2em;
     font-weight: normal;
-    margin-bottom: 2em; /* 为搜索框添加一些间距 */
+    margin-bottom: 2em; 
 }
 
-/* 搜索框样式 */
 .search-box {
-    position: relative; /* 设置搜索按钮的绝对定位上下文 */
-    display: inline-block; /* 使搜索框内联显示 */
+    position: relative; 
+    display: inline-block; 
     margin-top: 20px;
 }
 
 .search-box input {
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #ccc; /* 添加边框 */
-    border-radius: 25px; /* 圆角边框 */
-    width: 300px; /* 设置输入框宽度 */
+    border: 2px solid #ccc;
+    border-radius: 25px; 
+    width: 300px; 
 }
 
 .search-box button {
-    position: absolute; /* 绝对定位 */
-    right: 5px; /* 靠近右侧 */
-    top: 50%; /* 向上移动50% */
-    transform: translateY(-50%); /* 向下移动自身高度的50%来居中 */
-    background-color: transparent; /* 透明背景 */
+    position: absolute; 
+    right: 5px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: transparent; 
     border: none;
     cursor: pointer;
-    color: #fff; /* 白色图标 */
+    color: #fff; 
 }
 
-/* 主要内容样式 */
 main .content {
     display: flex;
     justify-content: space-around;
-    margin-top: 40px; /* 添加一些顶部间距 */
+    margin-top: 40px; 
     padding: 0 20px;
 }
 
-/* 主题部分的样式 */
 .topic {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 10px;
-    width: 45%; /* 每个主题区域占用45%宽度 */
+    width: 45%; 
     margin-bottom: 20px;
 }
 
 .topic h3 {
-    margin-bottom: 20px; /* 为标题和列表添加间距 */
+    margin-bottom: 20px; 
 }
 
 .topic ul {
-    list-style-type: none; /* 去除列表前的项目符号 */
+    list-style-type: none;
     padding: 0;
 }
 
 .topic ul li {
-    padding: 10px 0; /* 列表项间距 */
-    border-bottom: 1px solid #ddd; /* 列表项分隔线 */
+    padding: 10px 0; 
+    border-bottom: 1px solid #ddd; 
 }
 
 .topic button {
@@ -96,24 +92,23 @@ main .content {
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
-    margin-top: 20px; /* 按钮顶部间距 */
-    display: block; /* 使按钮占满容器宽度 */
+    margin-top: 20px; 
+    display: block; 
     width: 100%;
-    box-sizing: border-box; /* 确保宽度包括padding */
+    box-sizing: border-box; 
 }
 
 .topic button:hover {
-    background-color: #0d8ddb; /* 按钮悬停状态 */
+    background-color: #0d8ddb; 
 }
 
-/* 针对屏幕尺寸的响应式设计 */
 @media (max-width: 768px) {
     .content {
-        flex-direction: column; /* 以列方式排布 */
-        align-items: center; /* 居中对齐 */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .topic {
-        width: 90%; /* 移动设备上宽度更宽一些 */
+        width: 90%;
     }
 }
