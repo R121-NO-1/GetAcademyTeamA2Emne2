@@ -68,12 +68,12 @@ main {
 .map-iframe {
     width: 100%;
     height: 300px;
-    border: none; /* 去除边框 */
-    loading: lazy; /* 懒加载 */
-    allowfullscreen: true; /* 允许全屏 */
-    frameborder: 0; /* 去除边框 */
-    aria-hidden: false; /* 无障碍可见性 */
-    tabindex: 0; /* 可聚焦 */
+    border: none;
+    loading: lazy;
+    allowfullscreen: true;
+    frameborder: 0;
+    aria-hidden: false; 
+    tabindex: 0;
 }
 
 
