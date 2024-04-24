@@ -1,7 +1,7 @@
 
 const model = {
     app: {
-        currentPage: "contact" // antar at "contact" er den nåværende siden; dette kan settes dynamisk
+        currentPage: null, // antar at "contact" er den nåværende siden; dette kan settes dynamisk
     },
 
     input: {
@@ -17,20 +17,7 @@ const model = {
     },
 
     data: {
-        user: [ // Dette kan holde registrerte brukere eller innsendinger av skjemaer
-            {
-                firstName: "Kompis",
-                lastName: "Kompisen",
-                email: "a@a.no"
-            },
-            {
-                firstName: "Jørn",
-                lastName: "Kompisen",
-                email: "j@a.no"
-            },
-        ],
-
-        inquiries: [ 
+        inquiries: [
             // Array for å lagre henvendelser sendt gjennom kontaktskjemaet
             // Eksempel på henvendelse
             // {
@@ -43,6 +30,33 @@ const model = {
             //     }
             // }
         ],
+
+        homePage: {
+            welcome: 'Velkommen til Frida Foto!',
+            fotograph: 'Fotografi Studio Basert i Oslo',
+
+            description: [
+                'Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.',
+                'Aliqu diam amet diam et eos.',
+                'Clita erat ipsum et lorem et sit. Sed stet lorem sit clita duo. Justo magna dolore erat amet.'
+            ],
+
+            viewmore: "Se mer",
+
+            galleryitemimages: [
+                "../Images/bilde1.jpg",
+                "../Images/bilde2.jpg",
+                "../Images/bilde3.jpg",
+                "../Images/bilde4.jpg",
+                "../Images/bilde5.jpg",
+                "../Images/bilde6.jpg",
+                "../Images/bilde7.jpg",
+                "../Images/bilde8.jpg",
+                "../Images/bilde9.jpg",
+                "../Images/bilde10.jpg",
+                "../Images/bilde11.jpg",
+            ]
+        },
 
         Services: [
             {
@@ -61,7 +75,7 @@ const model = {
             },
             // ... more services ...
         ],
-        
+
         contactInfo: {
             phone_Number: "+47 4568 88 888",
             email: "hifridafoto@gmail.com"
@@ -75,16 +89,16 @@ const model = {
             telefonNumber: '+47 481 000 00',
             fridaEmail: 'fridaphoto@fridaphoto.no',
 
-            images: [           
+            images: [
                 '../Images/bilde1.jpg',
-                '../Images/bilde2.jpg', 
+                '../Images/bilde2.jpg',
                 '../Images/bilde3.jpg'
             ]
         },
 
         asideFrida: {
-            porttraitSrc: 
-            '../Images/WEDDING.png',
+            porttraitSrc:
+                '../Images/WEDDING.png',
 
             services: [
                 'Portrait photography',
@@ -92,9 +106,9 @@ const model = {
                 'Commercial photography'
             ],
 
-            googleMapURL: 
-            'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.994943748292!2d10.036383516039728!3d59.049996699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4646e944c5dc2eb9%3A0x32fe0474495a5b34!2sGET%20Academy%20AS%20-%20Norges%20r%C3%A5este%20IT-oppl%C3%A6ring!5e0!3m2!1sen!2sno!4v1597848556439!5m2!1sen!2sno'
-            
+            googleMapURL:
+                'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.994943748292!2d10.036383516039728!3d59.049996699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4646e944c5dc2eb9%3A0x32fe0474495a5b34!2sGET%20Academy%20AS%20-%20Norges%20r%C3%A5este%20IT-oppl%C3%A6ring!5e0!3m2!1sen!2sno!4v1597848556439!5m2!1sen!2sno'
+
         }
     }
 };

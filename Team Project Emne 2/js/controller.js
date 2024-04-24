@@ -1,12 +1,14 @@
-// global variables
-const thumbnails = document.querySelectorAll('.thumbnail');
-const galleryOverlay = document.querySelector('.gallery-overlay');
-const gallerySlides = document.querySelectorAll('.gallery-slides img');
-const viewMoreButton = document.getElementById('viewMore');
+
 
 // DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
     let currentSlide = 0;
+
+    // global variables
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const galleryOverlay = document.querySelector('.gallery-overlay');
+    const gallerySlides = document.querySelectorAll('.gallery-slides img');
+    const viewMoreButton = document.getElementById('viewMore');
 
     viewMoreButton.addEventListener('click', function() {
         window.location.href = '../html/services.html';

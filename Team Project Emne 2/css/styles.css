@@ -39,8 +39,15 @@ header {
     padding: 10px 20px;
 }
 
+/*.navbar-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}*/
+
 .navbar-logo img {
-    height: 40px; /* Adjust size as needed */
+    width: 100px;
+    height: auto;
 }
 
 .navbar-links a {

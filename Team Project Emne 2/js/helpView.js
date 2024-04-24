@@ -1,18 +1,12 @@
-const app = document.getElementById("home"); 
+const app = document.getElementById("app");
 
-// kan bli lagt i model egt
+document.addEventListener('DOMContentLoaded', function () {
+    //updateHelpPageView();
 
-
-updateView()
-    function helpView () {
-
-        app.innerHTML = /*HTML*/ `
-        
-        
-
-
+    function updateHelpPageView() {
+        let html = /*HTML*/ `
         `
 
-
-
+        app.innerHTML = html;
     }
+});

@@ -1,5 +1,6 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/helpStyle.css">
 </head>
+
 <body>
 
     <!-- navigation section -->
@@ -33,67 +35,45 @@
 
     <!-- main section -->
     <main>
+        <div class="help-container">
+            <div class="help-header">
+                <h1>Hjelp</h1>
+                <h2>Vi har hjelp til!</h2>
 
-
-    <div class="boxes_container"> 
-        <div class="faq-container">
-            <h1>Ofte stilte spørsmål
-                F.A.Q</h1>
-
-            <details class="faq-item">
-                <summary>Spørsmål eksempel 1?</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-            </details>
-
-            <details class="faq-item">
-                <summary>Spørsmål eksempel 2?</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-            </details>
-
-            <details class="faq-item">
-                <summary>Spørsmål eksempel 3?</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-            </details>
-
-            <details class="faq-item">
-                <summary>Spørsmål eksempel 4?</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-            </details>
-
-
-            <details class="faq-item">
-                <summary>Spørsmål eksempel 5?</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-            </details>
-
-
-
-            <div class = "services_container"> 
-                <!-- change class name to something else other than galley  -->
-                <h1> Tjenester detaljer her: </h1> <!-- Side by side-->
-                <p>test</p>
-                <p>test</p>
-                <p>test</p>
-                <p>test</p>
-                <p>test</p>
-                <p>test</p>
+                <div class="Search-box">
+                    <input type="text" placeholder="Search or jump to...">
+                    <button>🔍</button>
+                </div>
             </div>
 
+            <div class="content">
+                <div class="topic">
+                    <h3>Managing your account</h3>
+                    <ul>
+                        <li>About suspended accounts</li>
+                        <li>help with locked or limited account</li>
+                        <li>how to add your phone number to your account</li>
+                        <li>how to update your email <address></address>
+                        </li>
+                    </ul>
+                    <button>See all articles</button>
+                </div>
 
-
-
-
-            <!-- add more details -->
+                <div class="topic">
+                    <h3>Managing your account</h3>
+                    <ul>
+                        <li>About suspended accounts</li>
+                        <li>help with locked or limited account</li>
+                        <li>how to add your phone number to your account</li>
+                        <li>how to update your email <address></address>
+                        </li>
+                    </ul>
+                    <button>See all articles</button>
+                </div>
+            </div>
 
         </div>
-    </div>
-    
-</main>
+    </main>
 
     <!-- Footer Section -->
     <footer>
@@ -107,6 +87,8 @@
     </footer>
 
     <script src="../js/model.js"></script>
+    <script src="../js/helpView.js"></script>
     <script src="../js/helpController.js"></script>
 </body>
+
 </html>
