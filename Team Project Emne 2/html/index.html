@@ -13,32 +13,50 @@
 <body>
 
     <!-- navigation section -->
-    <header>
-        <div id="navbar">
+    <header class="site-header">
+        <div class="navbar-top">
             <div class="navbar-logo">
-                <img src="../Images/Logo.png" alt="logo">
+                <img src="../Images/Frida Photo..png" alt="logo">
             </div>
 
-            <div class="navbar-links">
+            <nav class="navbar-links">
                 <a href="./index.html">Hjem</a>
                 <a href="./services.html">Tjenester</a>
                 <a href="./about.html">Om meg</a>
                 <a href="./contact.html">Kontakt meg</a>
                 <a href="./helppage.html">Hjelp side</a>
-            </div>
+            </nav>
 
             <div class="navbar-actions">
                 <!-- <input type="text" placeholder="Search or jump to..."> -->
-                <button type="button">Sign in</button>
-                <button type="button">Dine Bestillinger</button>
+                <button type="button">Logg inn</button>
+                <button type="button">Dine Order</button>
             </div>
         </div>
+
+        <div id="welcomeSection"></div>
     </header>
 
     <!-- main section -->
     <main>
-        <section id="HomePage"></section>
-        <section id="gallerySection"></section>
+        <div class="our-gallery-section">
+            <h1>Prisvinennede webdesign</h1>
+            <p>Velg fra et uovertreffent sett med klassens beste nettsidesmaler.</p>
+            <section id="gallerySection"></section>
+        </div>
+
+        <div class="about-more">
+            <div class="about-more-text">
+                <h1>ABOUT US</h1>
+                <h2>Part of your success.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac vulputate dolor. Nullam venenatis enim in quam euismod fringilla...</p>
+                <button type="button">READ MORE</button>
+            </div>
+    
+            <div class="about-more-image">
+                <img src="../Images/pro-wedding-photography-tips2.bmp" alt="office Space">
+            </div>
+        </div>
     </main>
 
     <!-- Footer Section -->
@@ -56,14 +74,14 @@
                 </ul>
             </nav>
         </div>
-  
+
         <div class="footer-bottom">
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-google-plus-g"></i></a>
             </div>
-    
+
             <div class="copy-right">
                 <p>@ Copyright. All rights reserved.</p>
             </div>
@@ -71,8 +89,8 @@
     </footer>
 
     <script src="../js/Model.js"></script>
-    <script src="../js/View.js"></script>
-    <script src="../js/Controller.js"></script>
+    <script src="../js/Home/View.js"></script>
+    <script src="../js/Home/Controller.js"></script>
 </body>
 
 </html>

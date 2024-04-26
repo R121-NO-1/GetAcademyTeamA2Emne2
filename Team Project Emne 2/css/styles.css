@@ -5,66 +5,59 @@
     box-sizing: border-box;
 }
 
-body, html {
-    width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
+
 /*  HTML- og BODY-elementene end  */
 
-main {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: white;
-}
-
 /*      header start    */
-header {
-    background-color: #333;
+.site-header {
+    background: url('../Images/pro-wedding-photography-tips1.bmp') no-repeat center center;
+    background-size: cover;
     color: white;
-    padding: 10px 20px;
+    padding-top: 20px;
+    padding-bottom: 100px;
 }
 
-#orderMenu {
-    background-color: #777575
-}
-
-#navbar {
+/* Navigations */
+.navbar-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333; /* Or any other color you prefer */
-    color: white;
-    padding: 10px 20px;
+    /* Ensure the .navbar-top takes full width */
+    width: 100%;
+    /* Add horizontal padding if needed */
+    padding: 0 20px;
 }
 
-/*.navbar-logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}*/
-
 .navbar-logo img {
-    width: 85px;
-    height: auto;
+    width: 130px;
+    mix-blend-mode: multiply; /* to do: hiding the white background color */
+}
+
+.navbar-logo,
+.navbar-links,
+.navbar-actions {
+    padding: 5px 0;
 }
 
 .navbar-links a {
-    color: white;
+    color: rgb(29, 27, 27);
     text-decoration: none;
-    margin-left: 20px; /* Space out the nav links */
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 25px;
+
 }
 
 .navbar-links a:hover {
-    background-color: #555; /* Hover effect for links */
+    /*background-color: #c0a4a4;*/
+    text-decoration: underline;
 }
 
 .navbar-actions {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -76,59 +69,291 @@ header {
 }
 
 .navbar-actions button {
-    background-color: #007bff; /* Adjust button color as needed */
+    background-color: #fff;
+    color: rgb(61, 55, 55);
+    font-size: 1.0rem;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 0;
+    overflow: hidden; 
+    text-align: center; 
+}
+
+.navbar-actions button {
+    background-color: #fff; /* 按钮背景颜色 */
+    color: rgb(61, 55, 55); /* 按钮文本颜色 */
+    font-size: 16px; /* 按钮文本大小 */
+    font-weight: bold; /* 文本加粗 */
+
+    border: none; /* 无边框 */
+    width: 120px; /* 正方形宽度 */
+    height: 50px; /* 正方形高度 */
+
+    display: flex; /* 开启Flexbox布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    margin-right: 15px; /* 按钮间隔 */
+   
+    cursor: pointer; /* 鼠标光标变为手形 */
+    transition: background-color 0.3s; /* 鼠标悬停时背景颜色变化的过渡 */
+    overflow: hidden; /* 防止内容溢出 */
+    text-align: center; /* 文本居中 */
+    padding: 0; /* 去掉内边距以维持正方形 */
+    box-sizing: border-box; /* 确保宽度和高度包含padding和border */
+}
+
+
+.navbar-actions button:hover {
+    background-color: #d2dddd;
+    /* Hover effect for buttons */
+}
+
+/*      header end    */
+
+.welcome-section {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    padding: 50px;
+    text-align: center;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+    margin-right: auto;
+    max-width: 30%;
+
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2),
+                0 6px 6px 0 rgba(0, 0, 0, 0.4);
+
+}
+
+.welcome-section h1 {
+    font-size: 3.5rem;
+    color: #0c0b0b;
+    margin-bottom: 10px;
+}
+
+.welcome-section h2 {
+    font-size: 2.4rem;
+    color: #b8b0b0;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    color: #333131;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Gallery section */
+.our-gallery-section {
+    text-align: center;
+    background-color: #f4f4f4;
+    color:#333;
+    font-family: Arial, Helvetica, sans-serif;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+    width: 100%;
+    padding: 60px 20px;
+}
+
+.our-gallery-section h1 {
+    font-size: 2.5rem;
+    color: #0c0b0b;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.our-gallery-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* funksjoner */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 100px 20px;
+    gap: 40px;
+}
+
+.gallery-item {
+    width: 550px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* Added transition for smooth transformation */
+}
+
+.gallery-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.gallery-slides {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+
+.gallery-slides img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-slides img.large {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.buttons-container {
+    display: inline-block;
+    margin: 10px;
+}
+
+
+
+.about-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+    background-color:black;
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.about-more-text {
+    flex-basis: 50%; /* justerer denne verdier */
+    padding-left: 5px;
+    text-align: center;
+}
+
+.about-more-text h1 {
+    font-size: 3rem;
+    color: #f4f4f4;
+}
+
+.about-more-text h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color:#f4f4f4;
+}
+
+.about-more-text p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #f4f4f4;
+}
+
+.about-more-text button {
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 5px 15px;
-    margin-right: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.navbar-actions button:hover {
-    background-color: #0056b3; /* Hover effect for buttons */
-}
-/*      header end    */
-
-
-.welcome-section {
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center; 
-    padding: 50px; 
-    background-color: #f8f8f8; 
-    margin: 0 auto; 
-    max-width: 800px; 
-
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), /* first line of shadow */
-                0 6px 20px 0 rgba(0, 0, 0, 0.19);  /* second lines of shaow box*/
+.about-more-text button:hover {
+    background-color: #0056b3;
 }
 
-.welcome-section h1 {
-    font-size: 2.5rem; 
-    color: #333; 
-    margin-bottom: 20px; 
+.about-more-image {
+    flex-basis: 50%; /* Adjust the width of the image section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.welcome-section h2 {
-    font-size: 1.8rem; 
-    color: #555; 
-    margin-bottom: 30px; 
+.about-more-image img {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 950px; /* Adjust based on your image size */
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Optional: if you want rounded corners on the image */
 }
 
-.welcome-section p {
-    color: #666; 
-    font-size: 1rem; 
-    line-height: 1.6; 
-    margin-bottom: 10px; 
-}
 
 /*      footer start    */
 .site-footer {
     background-color: #333;
     color: white;
     padding: 40px 0;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
 }
 
@@ -173,9 +398,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    font-size: 0.9em; /* font sizes */
+    font-size: 0.9em;
+    /* font sizes */
     color: #fff;
-    background-color: #333; 
+    background-color: #333;
 }
 
 .social-links {
@@ -183,17 +409,18 @@ header {
 }
 
 .social-links a {
-    margin-right: 10px; 
-    color: #fff; 
-    text-decoration: none; 
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
 }
 
 .social-links a:last-child {
-    margin-right: 0; 
+    margin-right: 0;
 }
 
 .social-links i {
-    font-size: 1.5em; /* FontAwesome sosial icon size */
+    font-size: 1.5em;
+    /* FontAwesome sosial icon size */
 }
 
 .social-links span {
@@ -204,138 +431,54 @@ header {
     font-size: 0.9em;
     text-align: center;
 }
+
 /*      footer end    */
 
 
 
 /* Header Buttons changed to transition with box shadow */
 #viewMore {
-    background-color: #000;
-    color: white;
+    background-color: #fff;
+    color: black;
 
     display: inline-block;
-    padding: 10px 15px;
+    padding: 20px 50px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 18px;
+    font-weight: bolder;
 
     text-align: center;
     text-decoration: none;
+
+    margin-top: 50px;
+    margin-bottom: auto;
 }
 
 #viewMore:hover {
-    background-color: #81424a;
+    background-color: rgb(211, 200, 200);
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.gallery-item {
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
-}
-
-
-/* Hide the gallery overlay by default */
-/* Thumbnail Styles */
-.thumbnail {
-    width: 100px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Added transition for smooth transformation */
-}
-
-.gallery-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-}
-
-.gallery-slides {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.prev-btn {
-    left: 20px;
-}
-
-.next-btn {
-    right: 20px;
-}
-
-
-.gallery-slides img {
-    width: 100%; 
-    height: auto; 
-}
-
-.gallery-slides img.large {
-    width: 80%; 
-    height: auto; 
-    margin: auto; 
-    display: block; 
-}
-
-.buttons-container {
-    display: inline-block;
-    margin: 10px;
-}
 
 /* responsiveness */
 @media screen and (max-width: 768px) {
-    #navbar {
+    .navbar-top {
         flex-direction: column;
     }
 
-    .navbar-links, .navbar-actions {
+    .navbar-logo,
+    .navbar-links,
+    .navbar-actions {
+        padding: 10px 0;
+    }
+
+    .navbar-links {
+        justify-content: center;
         margin-top: 10px;
+    }
+
+    .navbar-links a.button {
+        margin: 10px 0;
     }
 
     .welcome-section h1 {
@@ -363,6 +506,7 @@ header {
     .footer-nav ul {
         margin-bottom: 20px;
     }
+
     .footer-bottom {
         flex-direction: column;
         text-align: center;

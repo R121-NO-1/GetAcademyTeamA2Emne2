@@ -1,4 +1,4 @@
-const homePage = document.getElementById("HomePage");
+const homePage = document.getElementById("welcomeSection");
 const homePageGallery = document.getElementById("gallerySection");
 
 function updateHomePage() {

@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: white;
+}
+
 #contact-info {
     border: 1px solid rgb(164, 68, 68);
     padding: 20px;
