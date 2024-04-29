@@ -89,26 +89,26 @@
 }
 
 .navbar-actions button {
-    background-color: #fff; /* 按钮背景颜色 */
-    color: rgb(61, 55, 55); /* 按钮文本颜色 */
-    font-size: 16px; /* 按钮文本大小 */
-    font-weight: bold; /* 文本加粗 */
+    background-color: #fff;
+    color: rgb(61, 55, 55);
+    font-size: 16px; 
+    font-weight: bold;
 
-    border: none; /* 无边框 */
-    width: 120px; /* 正方形宽度 */
-    height: 50px; /* 正方形高度 */
+    border: none; 
+    width: 120px; 
+    height: 50px;
 
-    display: flex; /* 开启Flexbox布局 */
-    align-items: center; /* 垂直居中 */
-    justify-content: center; /* 水平居中 */
-    margin-right: 15px; /* 按钮间隔 */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-right: 15px;
    
-    cursor: pointer; /* 鼠标光标变为手形 */
-    transition: background-color 0.3s; /* 鼠标悬停时背景颜色变化的过渡 */
-    overflow: hidden; /* 防止内容溢出 */
-    text-align: center; /* 文本居中 */
-    padding: 0; /* 去掉内边距以维持正方形 */
-    box-sizing: border-box; /* 确保宽度和高度包含padding和border */
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    overflow: hidden; 
+    text-align: center; 
+    padding: 0; 
+    box-sizing: border-box; 
 }
 
 
@@ -130,7 +130,7 @@
     margin-bottom: 50px;
     margin-left: 40px;
     margin-right: auto;
-    max-width: 30%;
+    max-width: 35%;
 
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2),
                 0 6px 6px 0 rgba(0, 0, 0, 0.4);

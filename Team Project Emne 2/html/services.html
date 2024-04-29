@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tjenester og Informasjon</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/popupStyle.css">
     <link rel="stylesheet" href="../css/servicesStyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
 
     <!-- navigation section -->
@@ -35,9 +38,33 @@
     <!-- main section -->
     <main>
         <div id="services-view"></div>
+
+        <div id="product-popup" class="product-popup">
+            <div class="product-popup-content">
+                <span id="close-btn" class="close-btn"><i class="fas fa-times"></i></span>
+                <img src="../Images/WEDDING.png" alt="wedding">
+                <div class="product-details">
+                    <h2>Product name: wedding</h2>
+                    <p class="rating"><i class="fa fa-star"></i></p>
+                    <p class="price">$77.49 <span class="orginal-price">$154.98</span></p>
+                    <p class="product-code">Product Code: 470951</p>
+                    <p class="stock-status">Stock <span class="in-stock">In Stock</span></p>
+
+                    <div class="attributes">
+                        <!-- attributes goes here -->
+                    </div>
+
+                    <div class="quantity-selector">
+                        <!-- quitity selector goes here -->
+                    </div>
+
+                    <button type="button" class="add-to-cart-btn">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+
     </main>
 
-    <!-- Footer Section -->
     <!-- Footer Section -->
     <footer class="site-footer">
         <div class="footer-top">
@@ -53,22 +80,24 @@
                 </ul>
             </nav>
         </div>
-  
+
         <div class="footer-bottom">
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-google-plus-g"></i></a>
             </div>
-    
+
             <div class="copy-right">
                 <p>@ Copyright. All rights reserved.</p>
             </div>
         </div>
     </footer>
     <!-- ../js/ -->
+
     <script src="../js/model.js"></script>
-    <script src="../js/servicesView.js"></script>
-    <script src="../js/ServicesController.js"></script>  
+    <script src="../js/Services/ServicesView.js"></script>
+    <script src="../js/Services/ServicesController.js"></script>
 </body>
+
 </html>
