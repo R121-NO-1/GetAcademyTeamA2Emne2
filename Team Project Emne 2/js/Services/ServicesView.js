@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         let ratingHtml = ``;
+
+  
         for (let i = 0; i < star_full; i++) {
             ratingHtml += /*HTML*/ `
                 <i class="fa fa-star"></i>
