@@ -16,7 +16,7 @@
     <header>
         <div id="navbar">
             <div class="navbar-logo">
-                <img src="../Images/Logo.png" alt="logo">
+                <img src="../Images/frida-foto-high-resolution-logo-black.png" alt="logo">
             </div>
 
             <div class="navbar-links">
@@ -43,21 +43,40 @@
                 <span id="close-btn" class="close-btn"><i class="fas fa-times"></i></span>
                 <img src="../Images/WEDDING.png" alt="wedding">
                 <div class="product-details">
-                    <h2>Product name: wedding</h2>
+                    <h2>Produkt Navn: Portrettfotografering </h2>
+                    <p>Description: Dette produktet håndterer Portrettfotografering, dette handler om at bildene skal
+                        være jo stor som du vil, men altså fokusert på kun et subjekt, dette skal kunne vise fram ditt
+                        valgte subjekt når vi møtes på Foto studioet.</p>
                     <p class="rating"><i class="fa fa-star"></i></p>
-                    <p class="price">$77.49 <span class="orginal-price">$154.98</span></p>
-                    <p class="product-code">Product Code: 470951</p>
+                    <p class="price"> Kr 1200 <span class="original-price"> Kr 1500 </span></p>
+                    <!-- <p class="product-code">Product Code: 470951</p> -->
                     <p class="stock-status">Stock <span class="in-stock">In Stock</span></p>
 
                     <div class="attributes">
                         <!-- attributes goes here -->
+                        <label for="service">Velg tjeneste:</label>
+                        <select id="service" name="service">
+                            <option value="1500">Portrettfotografering (økt som varer på 1 time) - kr 1500 </option>
+                            <option value="2500">Familieportretter (økt som varer på 2 time) - Kr 2500</option>
+                            <option value="1500">Barnefotografering (økt som varer på 1 time) - Kr 1500</option>
+                            <option value="3500">Gruppefotografering (økt som varer på 3 time) - Kr 3500</option>
+                            <option value="3000">Bedriftsportretter (økt som varer på 2 time) - Kr 3000</option>
+                            <option value="2500">Produktfotografering (økt som varer på 2 time) - Kr 2500</option>
+                            <option value="4500">Eventfotografering (økt som varer på 4 time) - Kr 4500</option>
+                            <option value="2000">Matfotografering (økt som varer på 2 time) - Kr 2000</option>
+                            <option value="3500">Interiørfotografering (økt som varer på 3 time) - Kr 3500</option>
+                            <option value="5000">Reisefotografering (1 dags utflukt) - Kr 5000</option>
+                            <option value="6000">Bryllupsfotografering (1 dag) - Kr 6000</option>
+                        </select>
                     </div>
 
                     <div class="quantity-selector">
                         <!-- quitity selector goes here -->
+                        <label for="quantity">Antall Stk:</label>
+                        <input type="number" id="quantity" name="quantity" min="0" value="1">
                     </div>
 
-                    <button type="button" class="add-to-cart-btn">ADD TO CART</button>
+                    <button type="button" class="add-to-cart-btn">LEGG I HANDLEKURV</button>
                 </div>
             </div>
         </div>
@@ -69,7 +88,7 @@
         <div class="footer-top">
             <div class="logo-area">
                 <h1>Frida Photo</h1>
-                <p>Vårt dedikerte team arbeider med precision og kreativitet</p>
+                <p>Våre dedikerte team arbeider med precision og kreativitet</p>
             </div>
             <nav class="footer-nav">
                 <ul>

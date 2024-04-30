@@ -29,7 +29,7 @@
 }
 
 .navbar-logo img {
-    width: 130px;
+    width: 100px;
     mix-blend-mode: multiply; /* to do: hiding the white background color */
 }
 
