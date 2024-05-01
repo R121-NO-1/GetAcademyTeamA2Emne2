@@ -40,16 +40,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     <p>Description: Dette produktet håndterer Portrettfotografering, dette handler om at bildene skal
                         være jo stor som du vil, men altså fokusert på kun et subjekt, dette skal kunne vise fram ditt
                         valgte subjekt når vi møtes på Foto studioet.</p>
-                    <p class="rating"><i class="fa fa-star"></i></p>
+
+                    <div id="rating"></div>
                     <div id="price"></div>
-                    <!-- <p class="product-code">Product Code: 470951</p> -->
-                    <p class="stock-status">Stock <span class="in-stock">In Stock</span></p>
+                    <p class="stock-status">På Lager: <span class="in-stock"> In Stock</span></p>
 
                     <div class="attributes">
                         <!-- attributes goes here -->
                         <label for="service">Velg tjeneste:</label>
                         <select id="service" name="service">
-                            ${showServices()}
+                            ${showServicesOptionTag()}
                         </select>
                     </div>
 
@@ -65,69 +65,55 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         `
         services_popup.innerHTML = html;
-        
-    }
 
-
-    function showServices() {
-        const model_products = model.data.ServicesProducts;
-
-        let html = /*HTML*/ ``;
-        
-        model_products.forEach(element => {
-            html += `
-                <option value="${element.price}">${element.name}</option>
-            `
+        // når vi skyve ned menyen og klikke for å bytte til andre elementer, som vil endre all produktinformasjon.
+        const service_id = document.getElementById("service");
+        service_id.addEventListener('change', () => {
+            changePrice();
+            showServicesRating();
         });
 
+        // To do: initialiser html-kode når View() funksjonen lastes inn for første gang
+        changePrice();
+        showServicesRating();
+    }
+
+    function showServicesOptionTag() {
+        const model_products = model.data.ServicesProducts;
+        let html = ``;
+        model_products.forEach(element => {
+            html += `<option value="${element.price}">${element.name}</option>`
+        });
         return html;
     }
 
-    const service_id = document.getElementById("service");
-    service_id.addEventListener('change', () => {
-        changeProducts();
-    });
+    function showServicesRating() {
+        const rating_id = document.getElementById("rating");
+        const rating = getRandomRating(2.5, 5.0);
+        
+        let ratingHtml = `
+                <p class="rating">
+                    ${displayRatingHtml(rating)}
+                </p>
+        `;
 
-    // Levi
-    // To do: Trenger å fikse at når vi laster produktpopup-siden for første gang vises ikke prisen
-    // improvement !!
+        rating_id.innerHTML = ratingHtml;
+    }
 
-    function changeProducts() {
+    function changePrice() {
         const price = document.getElementById("price");
         const services_products = model.data.ServicesProducts;
-
+        const service_id = document.getElementById("service");
         let priceHtml = ``;
 
-        console.log(service_id.value);
-
-        services_products.forEach((model_services, index) => {
-
-            if (model_services.price == service_id.value) {
-                priceHtml = `
-                    <p class="price">
-                        Kr ${model_services.price} <span class="original-price"> Kr ${model_services.originalPrice} </span>
-                    </p>
-                `
-            }
+        services_products.forEach(model_services => {
+            priceHtml = model_services.price == service_id.value ? 
+                                    `<p class="price">Kr ${model_services.price} 
+                                        <span class="original-price"> Kr ${model_services.originalPrice} </span>
+                                    </p` : priceHtml;
         });
-        
+
         price.innerHTML = priceHtml;
-
-
-
-
-        /*const service = document.getElementById("service");
-        const price = document.getElementById("price");
-
-        const model_products = model.data.ServicesProducts;
-
-        console.log(price.textContent);
-        
-        service.addEventListener('change', () => {
-            model_products.map(element => {
-                price.textContent = `Kr ${element.price}`;
-            });
-        });*/
     }
 
     function getRandomRating(minRating, maxRating) {
@@ -159,26 +145,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         for (let i = 0; i < star_full; i++) {
-            ratingHtml += /*HTML*/ `
-                <i class="fa fa-star"></i>
-            `
+            ratingHtml += /*HTML*/ `<i class="fa fa-star"></i>`
         }
 
         if (star_half == true) {
-            ratingHtml += /*HTML*/ `
-                <i class="fa fa-star-half"></i>            
-             `
+            ratingHtml += /*HTML*/ `<i class="fa fa-star-half"></i>`
         }
-
 
         //console.log(rating);
 
         let html = /*HTML*/ `
-            <div class="product-rating">
-                ${ratingHtml}
-            </div>
+            ${ratingHtml}
         `
-
         return html;
     }
 });
