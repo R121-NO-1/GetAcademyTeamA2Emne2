@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
         services_products.forEach(model_services => {
             priceHtml = model_services.price == service_id.value ? 
                                     `<p class="price">Kr ${model_services.price} 
-                                        <span class="original-price"> Kr ${model_services.originalPrice} </span>
+                                        <span class="original-price"> Kr${model_services.originalPrice}</span>
                                     </p` : priceHtml;
         });
 
@@ -132,17 +132,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function displayRatingHtml(rating) {
         const star_full = Math.floor(rating);
-        let star_half;
-
-        if (rating % 1 >= 0.5) {
-            star_half = true;
-        }
-        else {
-            star_half = false;
-        }
-
+        let star_half = (rating % 1 >= 0.5) ? true : false;
         let ratingHtml = ``;
-
 
         for (let i = 0; i < star_full; i++) {
             ratingHtml += /*HTML*/ `<i class="fa fa-star"></i>`

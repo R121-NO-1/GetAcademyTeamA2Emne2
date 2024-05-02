@@ -79,19 +79,6 @@ const model = {
             // ... more services ...
         ],
 
-        /*
-                            <option value="1500">Portrettfotografering (økt som varer på 1 time) - kr 1500 </option>
-                            <option value="2500">Familieportretter (økt som varer 2 timer) - Kr 2500</option>
-                            <option value="1500">Barnefotografering (økt som varer på 1 time) - Kr 1500</option>
-                            <option value="3500">Gruppefotografering (økt som varer på 3 time) - Kr 3500</option>
-                            <option value="3000">Bedriftsportretter (økt som varer på 2 time) - Kr 3000</option>
-                            <option value="2500">Produktfotografering (økt som varer på 2 time) - Kr 2500</option>
-                            <option value="4500">Eventfotografering (økt som varer på 4 time) - Kr 4500</option>
-                            <option value="2000">Matfotografering (økt som varer på 2 time) - Kr 2000</option>
-                            <option value="3500">Interiørfotografering (økt som varer på 3 time) - Kr 3500</option>
-                            <option value="5000">Reisefotografering (1 dags utflukt) - Kr 5000</option>
-                            <option value="6000">Bryllupsfotografering (1 dag) - Kr 6000</option>
-                            */
         ServicesProducts : [
             {
                 price: "1500",
