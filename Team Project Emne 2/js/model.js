@@ -79,6 +79,64 @@ const model = {
             // ... more services ...
         ],
 
+        ServicesProducts : [
+            {
+                price: "1500",
+                originalPrice: "1800",
+                name: 'Portrettfotografering (økt som varer på 1 time)',
+            },
+            {
+                price: "2500",
+                originalPrice: "2800",
+                name: 'Familieportretter (økt som varer 2 timer)',
+            },
+            {
+                price: "1500",
+                originalPrice: "1800",
+                name: 'Barnefotografering (økt som varer på 1 time)',
+            },
+            {
+                price: "3500",
+                originalPrice: "3800",
+                name: 'Gruppefotografering (økt som varer på 3 timer)',
+            },
+            {
+                price: "3000",
+                originalPrice: "3300",
+                name: 'Bedriftsportretter (økt som varer på 2 timer)',
+            },
+            {
+                price: "2500",
+                originalPrice: "2800",
+                name: 'Produktfotografering (økt som varer på 2 timer)',
+            },
+            {
+                price: "4500",
+                originalPrice: "4800",
+                name: 'Eventfotografering (økt som varer på 4 timer)',
+            },
+            {
+                price: "2000",
+                originalPrice: "2300",
+                name: 'Matfotografering (økt som varer på 2 timer)',
+            },
+            {
+                price: "3500",
+                originalPrice: "3800",
+                name: 'Interiørfotografering (økt som varer på 3 timer)',
+            },
+            {
+                price: "5000",
+                originalPrice: "5300",
+                name: 'Reisefotografering (1 dags utflukt)',
+            },
+            {
+                price: "6000",
+                originalPrice: "6300",
+                name: 'Bryllupsfotografering (1 dag)',
+            }
+        ],
+
         contactInfo: {
             phone_Number: "+47 4568 88 888",
             email: "hifridafoto@gmail.com"

@@ -28,6 +28,14 @@
     align-items: center;
 }
 
+.product-popup img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+}
+
 .product-details {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #333;
