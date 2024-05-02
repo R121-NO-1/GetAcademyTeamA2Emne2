@@ -54,6 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
         gallerySlides.forEach(slide => slide.style.display = 'none');
         gallerySlides[currentSlide].style.display = 'block';
     }
+
+    window.addEventListener('click', function(event) {
+        if (event.target === galleryOverlay) {
+            galleryOverlay.style.display = 'none';
+        }
+    });
 });
 
 
