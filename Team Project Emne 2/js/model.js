@@ -84,11 +84,14 @@ const model = {
                 price: "1500",
                 originalPrice: "1800",
                 name: 'Portrettfotografering (økt som varer på 1 time)',
+                image: "portrettfotografering.jpg",
+                description: 'Description: Dette produktet håndterer Portrettfotografering, dette handler om at bildene skal være jo stor som du vil, men altså fokusert på kun et subjekt, dette skal kunne vise fram ditt valgte subjekt når vi møtes på Foto studioet'
             },
             {
                 price: "2500",
                 originalPrice: "2800",
                 name: 'Familieportretter (økt som varer 2 timer)',
+                description: 'Description: Dette produktet håndterer Familieportretter, dette handler om at bildene skal være jo stor som du vil, men altså fokusert på kun et subjekt'
             },
             {
                 price: "1500",

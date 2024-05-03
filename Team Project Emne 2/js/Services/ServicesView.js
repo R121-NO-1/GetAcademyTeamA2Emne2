@@ -37,9 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <img src="../Images/WEDDING.png" alt="wedding">
                 <div class="product-details">
                     <h2>Produkt Navn: Portrettfotografering </h2>
-                    <p>Description: Dette produktet håndterer Portrettfotografering, dette handler om at bildene skal
-                        være jo stor som du vil, men altså fokusert på kun et subjekt, dette skal kunne vise fram ditt
-                        valgte subjekt når vi møtes på Foto studioet.</p>
+                    <p id="description"></p>
 
                     <div id="rating"></div>
                     <div id="price"></div>
@@ -69,12 +67,14 @@ document.addEventListener('DOMContentLoaded', function () {
         // når vi skyve ned menyen og klikke for å bytte til andre elementer, som vil endre all produktinformasjon.
         const service_id = document.getElementById("service");
         service_id.addEventListener('change', () => {
-            changePrice();
+            changePrice(service_id.value);
+            changeDescription(service_id.selectedIndex);
             showServicesRating();
         });
 
         // To do: initialiser html-kode når View() funksjonen lastes inn for første gang
-        changePrice();
+        changePrice(service_id.value);
+        changeDescription(service_id.selectedIndex);
         showServicesRating();
     }
 
@@ -100,14 +100,14 @@ document.addEventListener('DOMContentLoaded', function () {
         rating_id.innerHTML = ratingHtml;
     }
 
-    function changePrice() {
+    function changePrice(value) {
         const price = document.getElementById("price");
         const services_products = model.data.ServicesProducts;
-        const service_id = document.getElementById("service");
+
         let priceHtml = ``;
 
         services_products.forEach(model_services => {
-            priceHtml = model_services.price == service_id.value ? 
+            priceHtml = model_services.price == value ? 
                                     `<p class="price">Kr ${model_services.price} 
                                         <span class="original-price"> Kr${model_services.originalPrice}</span>
                                     </p` : priceHtml;
@@ -115,6 +115,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         price.innerHTML = priceHtml;
     }
+
+    function changeDescription(index) {
+        const description = document.getElementById("description");
+        const services_products = model.data.ServicesProducts;
+
+        let descriptionHtml = ``;
+
+        services_products.forEach((dsc, dscIndex) => {
+            descriptionHtml = dscIndex == index ? `<p>${dsc.description}</p>` : descriptionHtml;
+            //console.log('array prices ' + dsc.price);
+            //console.log('select index ' + index);
+        });
+
+        description.innerHTML = descriptionHtml;
+    }
+
 
     function getRandomRating(minRating, maxRating) {
         let half_rating = 0.5;
