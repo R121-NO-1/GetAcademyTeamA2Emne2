@@ -52,13 +52,13 @@ function updateHomePageGallery() {
     let html = /*HTML*/ `
         <div class="gallery">
             <div class="gallery-item">
-                <img src="../Images/bilde1.jpg" alt="Image 1" class="thumbnail" data-index="0">
+                <img src="../Images/bilde1.jpg" alt="To gamle personener som henger ut" class="thumbnail" data-index="0">
             </div>
             <div class="gallery-item">
-                <img src="../Images/bilde2.jpg" alt="Image 2" class="thumbnail" data-index="1">
+                <img src="../Images/bilde2.jpg" alt="en dame på stranda med solbriller" class="thumbnail" data-index="1">
             </div>
             <div class="gallery-item">
-                <img src="../Images/bilde3.jpg" alt="Image 3" class="thumbnail" data-index="2">
+                <img src="../Images/bilde3.jpg" alt="et stort glass byggning" class="thumbnail" data-index="2">
             </div>
         </div>
 
