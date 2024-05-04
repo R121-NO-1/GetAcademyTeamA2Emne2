@@ -32,7 +32,7 @@ header .top-nav .middle-nav {
 }
 
 .logo {
-    height: 120px; /* Adjust based on your logo size */
+    height: 100px; /* Adjust based on your logo size */
     align-self: center;
     margin: auto 0;
     margin-right: 10%;
