@@ -52,14 +52,103 @@ header .top-nav .middle-nav {
     padding: 8px;
 }
 
-.shopping-cart i {
-    font-size: 24px;
-    color: #00b2a9;
+.shopping-cart {
+    position: relative; 
+    cursor: pointer;
+    padding: 10px; 
+    background-color: rgb(75, 132, 139);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 2.1); 
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: rgb(75, 132, 139);
+    color: black;
+    border-radius: 100%;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.cart-tooltip {
+    font-size: 13px;
+    visibility: visible; /* use javascript to change this attburite */
+    width: 300px; 
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 100;
+
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,1.2);
+}
+
+.cart-tooltip::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent white transparent;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-item:last-child {
+    margin-bottom: 0;
+}
+
+.cart-item img {
+    width: 50px; /* 调整图片大小 */
+    height: 50px;
+    border-radius: 50%;
+}
+
+.cart-item .item-name {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.cart-item .item-price {
+    font-weight: bold;
+}
+
+.sub-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #00a2e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.shopping-cart i:hover {
-    color: blue;
+.checkout-btn:hover {
+    background-color: #008ac7;
 }
 
 .bottom-nav {

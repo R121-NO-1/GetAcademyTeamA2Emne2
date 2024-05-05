@@ -13,7 +13,8 @@ const model = {
             lastName: "", // Tilsvarer inputfeltet for etternavn
             email: "" // Tilsvarer inputfeltet for e-post
         },
-        // Andre sider kan ha sin egen inputmodell, f.eks. homePage, aboutPage
+
+        shopingCart: [],
     },
 
     data: {
@@ -84,58 +85,78 @@ const model = {
                 price: "1500",
                 originalPrice: "1800",
                 name: 'Portrettfotografering (økt som varer på 1 time)',
-                image: "portrettfotografering.jpg",
+                image: "../Images/bilde1.jpg",
                 description: 'Description: Dette produktet håndterer Portrettfotografering, dette handler om at bildene skal være jo stor som du vil, men altså fokusert på kun et subjekt, dette skal kunne vise fram ditt valgte subjekt når vi møtes på Foto studioet'
             },
             {
                 price: "2500",
                 originalPrice: "2800",
                 name: 'Familieportretter (økt som varer 2 timer)',
+                image: "../Images/bilde1.jpg",
+
                 description: 'Description: Dette produktet håndterer Familieportretter, dette handler om at bildene skal være jo stor som du vil, men altså fokusert på kun et subjekt'
             },
             {
                 price: "1500",
                 originalPrice: "1800",
+                image: "../Images/bilde1.jpg",
+
                 name: 'Barnefotografering (økt som varer på 1 time)',
             },
             {
                 price: "3500",
                 originalPrice: "3800",
+                image: "../Images/bilde1.jpg",
+
                 name: 'Gruppefotografering (økt som varer på 3 timer)',
             },
             {
                 price: "3000",
                 originalPrice: "3300",
+                image: "../Images/bilde1.jpg",
+
                 name: 'Bedriftsportretter (økt som varer på 2 timer)',
             },
             {
                 price: "2500",
                 originalPrice: "2800",
+                image: "../Images/bilde1.jpg",
+
                 name: 'Produktfotografering (økt som varer på 2 timer)',
             },
             {
                 price: "4500",
                 originalPrice: "4800",
+                image: "../Images/bilde1.jpg",
+
                 name: 'Eventfotografering (økt som varer på 4 timer)',
             },
             {
                 price: "2000",
                 originalPrice: "2300",
+                image: "../Images/bilde1.jpg",
+
                 name: 'Matfotografering (økt som varer på 2 timer)',
             },
             {
                 price: "3500",
                 originalPrice: "3800",
+                image: "../Images/bilde1.jpg",
+
                 name: 'Interiørfotografering (økt som varer på 3 timer)',
             },
             {
                 price: "5000",
                 originalPrice: "5300",
+                image: "../Images/bilde1.jpg",
+
                 name: 'Reisefotografering (1 dags utflukt)',
             },
             {
                 price: "6000",
                 originalPrice: "6300",
+                image: "../Images/bilde1.jpg",
+
                 name: 'Bryllupsfotografering (1 dag)',
             }
         ],
