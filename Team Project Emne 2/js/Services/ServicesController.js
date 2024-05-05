@@ -3,17 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const product_popup = document.getElementById('product-popup');
     const close_btn = document.getElementById('close-btn');
 
-    /*if (add_to_cart) {
-        console.log('add to cart clicked');
-    }
-
-    if (product_popup) {
-        console.log('product popup clicked');
-    }
-    else {
-        console.log('no product popup');
-    }
-    */
 
     close_btn.addEventListener('click', () => {
         product_popup.style.display = 'none';
@@ -28,5 +17,4 @@ document.addEventListener('DOMContentLoaded', () => {
             product_popup.style.display = 'none';
         }
     });
-
 });

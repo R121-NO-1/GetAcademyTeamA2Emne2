@@ -5,10 +5,10 @@ const services_shopping_cart_view = document.getElementById("shopping-cart-view"
 function updateShopingCartView() {
     let html = /*HTML*/ `
         <div class="shopping-cart">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-shopping-cart cart-icon"></i>
             <span class="cart-count">${model.input.shopingCart.length}</span>
 
-            <div class="cart-tooltip">
+            <div class="cart-tooltip" style="visibility: hidden;">
                 <div class="cart-item">
                     ${shoppingCartDisplay()}
                 </div>
@@ -23,6 +23,23 @@ function updateShopingCartView() {
         </div>`;
 
     services_shopping_cart_view.innerHTML = html;
+
+    const cart_icon = document.querySelector('.cart-icon');
+    const cart_tooltip = document.querySelector('.cart-tooltip');
+
+    cart_icon.addEventListener('click', () => {
+        if (cart_tooltip.style.visibility === 'hidden') {
+            cart_tooltip.style.visibility = 'visible';
+        } else {
+            cart_tooltip.style.visibility = 'hidden';
+        }
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!cart_icon.contains(event.target) && !cart_tooltip.contains(event.target)) {
+            cart_tooltip.style.visibility = 'hidden';
+        }
+    });
 }
 
 function updateServicesView() {
@@ -114,14 +131,16 @@ function updateServicesPopUpView() {
 }
 
 function addToShoppingCart(product, quantity) {
-    console.log(product);
-    console.log(quantity);
+    //console.log(product);
+    //console.log(quantity);
 
     if (product == 0) {
         return;
     }
 
     const product_index = model.input.shopingCart.findIndex(item => item.name === product.name);
+
+    //console.log(product_index);
 
     if (product_index !== -1) {
         model.input.shopingCart[product_index].quantity += quantity;

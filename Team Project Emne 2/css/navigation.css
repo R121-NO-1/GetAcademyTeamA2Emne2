@@ -9,7 +9,8 @@ header .top-nav .middle-nav {
 }
 
 .top-nav {
-    background-color: #00b2a9;;
+    background-color: #00b2a9;
+    ;
     color: black;
     display: flex;
     justify-content: space-between;
@@ -32,7 +33,8 @@ header .top-nav .middle-nav {
 }
 
 .logo {
-    height: 100px; /* Adjust based on your logo size */
+    height: 100px;
+    /* Adjust based on your logo size */
     align-self: center;
     margin: auto 0;
     margin-right: 10%;
@@ -53,12 +55,31 @@ header .top-nav .middle-nav {
 }
 
 .shopping-cart {
-    position: relative; 
+    position: relative;
     cursor: pointer;
-    padding: 10px; 
+    padding: 3px;
     background-color: rgb(75, 132, 139);
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 2.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.fas.fa-shopping-cart {
+    font-size: 20px;
+    /* 图标大小 */
+    color: #333;
+    /* 图标颜色 */
+    cursor: pointer;
+    /* 鼠标悬停时显示指针，表示可点击 */
+    padding: 10px;
+    /* 周围的空间，使点击更容易 */
+    transition: color 0.3s ease;
+    /* 过渡效果使颜色变化更平滑 */
+}
+
+/* 图标悬停效果 */
+.fas.fa-shopping-cart:hover {
+    color: #1a8cff;
+    /* 悬停时颜色变化 */
 }
 
 .cart-count {
@@ -74,9 +95,12 @@ header .top-nav .middle-nav {
 }
 
 .cart-tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
     font-size: 13px;
-    visibility: visible; /* use javascript to change this attburite */
-    width: 300px; 
+    width: 400px;
     background-color: #fff;
     color: #333;
     text-align: left;
@@ -84,12 +108,10 @@ header .top-nav .middle-nav {
     padding: 10px;
     position: absolute;
     z-index: 100;
-
     top: 150%;
     left: 50%;
     transform: translateX(-50%);
-
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,1.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
 }
 
 .cart-tooltip::after {
@@ -115,7 +137,8 @@ header .top-nav .middle-nav {
 }
 
 .cart-item img {
-    width: 50px; /* 调整图片大小 */
+    width: 50px;
+    /* 调整图片大小 */
     height: 50px;
     border-radius: 50%;
 }
@@ -132,14 +155,15 @@ header .top-nav .middle-nav {
 .sub-total {
     display: flex;
     justify-content: space-between;
+    text-align: right; 
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px solid #ccc;
 }
 
 .checkout-btn {
-    width: 100%;
-    padding: 10px;
+    width: 50%;
+    padding: 7px;
     background-color: #00a2e8;
     color: white;
     border: none;
