@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tjenester og Informasjon</title>
- 
+
     <link rel="stylesheet" href="../combine/combined.css">
     <link rel="stylesheet" href="../css/navigation.css">
-    <link rel="stylesheet" href="../css/popupStyle.css">
-    <link rel="stylesheet" href="../css/servicesStyle.css">
+    <link rel="stylesheet" href="../css/shoppingStyle.css">
+
 </head>
 
 <body>
-
     <!-- navigation section -->
     <header>
         <div class="top-nav"></div>
@@ -35,10 +34,42 @@
         </nav>
     </header>
 
-    <!-- main section -->
     <main>
-        <div id="services-view"></div>
-        <div id="services-popup-view"></div>
+        <div class="shopping-cart-container">
+            <h2>SHOPPING CART</h2>
+            <table class="shopping-cart-table">
+                <thead>
+                    <tr>
+                        <th>img</th>
+                        <th>Item Name</th>
+                        <th>Qty</th>
+                        <th>Unit</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><img src="path-to-image" alt="Product Image"></td>
+                        <td>Sample Item</td>
+                        <td>1</td>
+                        <td>$15</td>
+                        <td>$15</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Sub-Total</td>
+                        <td>$15</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="checkout-container">
+                <button class="checkout-btn">CHECKOUT</button>
+            </div>
+        </div>
     </main>
 
     <!-- Footer Section -->
@@ -69,11 +100,5 @@
             </div>
         </div>
     </footer>
-    <!-- ../js/ -->
-
-    <script src="../js/model.js"></script>
-    <script src="../js/Services/ServicesView.js"></script>
-    <script src="../js/Services/ServicesController.js"></script>
 </body>
-
 </html>
