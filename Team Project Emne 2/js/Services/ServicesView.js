@@ -30,8 +30,11 @@ function updateShopingCartView() {
     cart_icon.addEventListener('click', () => {
         if (cart_tooltip.style.visibility === 'hidden') {
             cart_tooltip.style.visibility = 'visible';
+   
         } else {
-            cart_tooltip.style.visibility = 'hidden';
+            cart_tooltip.style.visibility = 'hidden'; 
+   
+            // console.log doesnt work
         }
     });
 
@@ -49,17 +52,17 @@ function updateServicesView() {
     <div class="product-grid">
         <div class="product-item">
             <img src="../Images/bilde1.jpg" alt="product">
-            <h3 class="product-name">Beautifull weddings</h3>
+            <h3 class="product-name">Våre Lykkelige Bestilte Produkter</h3>
            
             <div class="product-rating">
                 ${displayRatingHtml(generate_rating)}
             </div>
      
             <div class="product-price">
-                <span class="product-hours">4 timer</span>
+                <span class="product-hours">Trykk på knappen for mer info. </span>
             </div>
 
-            <button type="button" id="add-to-cart" class="add-to-cart">legg til bestillinger</button>
+            <button type="button" id="add-to-cart" class="add-to-cart">Se Produkter</button>
         </div>
     </div>`
 
