@@ -10,4 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
         app.innerHTML = html;
     }
 
+    updateShopingCartView();
+    loadShoppingCartStorage();
 });

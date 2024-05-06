@@ -30,11 +30,9 @@ function updateShopingCartView() {
     cart_icon.addEventListener('click', () => {
         if (cart_tooltip.style.visibility === 'hidden') {
             cart_tooltip.style.visibility = 'visible';
-   
+
         } else {
-            cart_tooltip.style.visibility = 'hidden'; 
-   
-            // console.log doesnt work
+            cart_tooltip.style.visibility = 'hidden';
         }
     });
 
@@ -133,17 +131,31 @@ function updateServicesPopUpView() {
     showServicesRating();
 }
 
-function addToShoppingCart(product, quantity) {
-    //console.log(product);
-    //console.log(quantity);
+function saveShoppingCartStorage() {
+    const shoping_cart_data = JSON.stringify(model.input.shopingCart);
+    localStorage.setItem('shopingCartData', shoping_cart_data);
+}
 
+function loadShoppingCartStorage() {
+    const shoping_cart_data = localStorage.getItem('shopingCartData');
+
+    if (shoping_cart_data) {
+        model.input.shopingCart = JSON.parse(shoping_cart_data);
+
+        /* model.input.shopingCart.map(item => {
+            console.log(item);
+        }); */
+
+        updateShopingCartView();
+    }
+}
+
+function addToShoppingCart(product, quantity) {
     if (product == 0) {
         return;
     }
 
     const product_index = model.input.shopingCart.findIndex(item => item.name === product.name);
-
-    //console.log(product_index);
 
     if (product_index !== -1) {
         model.input.shopingCart[product_index].quantity += quantity;
@@ -157,6 +169,7 @@ function addToShoppingCart(product, quantity) {
     }
 
     updateShopingCartView();
+    saveShoppingCartStorage();
 }
 
 function calculateTotalPrice() {
@@ -286,4 +299,5 @@ document.addEventListener('DOMContentLoaded', function () {
     updateServicesView();
     updateServicesPopUpView();
     updateShopingCartView();
+    loadShoppingCartStorage();
 });

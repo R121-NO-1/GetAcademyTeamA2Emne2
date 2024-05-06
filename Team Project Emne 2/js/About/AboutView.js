@@ -4,6 +4,9 @@ const aside_view = document.getElementById('aside-view');
 document.addEventListener('DOMContentLoaded', function () {
     updateAboutFridaView();
     updateAsideView();
+    
+    updateShopingCartView();
+    loadShoppingCartStorage();
 
     function updateAboutFridaView() {
         let html = /*HTML*/ `
