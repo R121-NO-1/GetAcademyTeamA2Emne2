@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     updateAboutFridaView();
     updateAsideView();
     
-    updateShopingCartView();
-    loadShoppingCartStorage();
+ /*    updateShopingCartView();
+    loadShoppingCartStorage(); */
 
     function updateAboutFridaView() {
         let html = /*HTML*/ `

@@ -145,7 +145,7 @@ function loadShoppingCartStorage() {
         /* model.input.shopingCart.map(item => {
             console.log(item);
         }); */
-
+        /* localStorage.clear(); */
         updateShopingCartView();
     }
 }
@@ -169,7 +169,7 @@ function addToShoppingCart(product, quantity) {
     }
 
     updateShopingCartView();
-    saveShoppingCartStorage();
+/*     saveShoppingCartStorage(); */
 }
 
 function calculateTotalPrice() {
@@ -299,5 +299,5 @@ document.addEventListener('DOMContentLoaded', function () {
     updateServicesView();
     updateServicesPopUpView();
     updateShopingCartView();
-    loadShoppingCartStorage();
+/*     loadShoppingCartStorage(); */
 });
