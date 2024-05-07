@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     updateContactInfoView();
     UpdateContactFormView();
     
-    updateShopingCartView();
-    loadShoppingCartStorage();
+/*     updateShopingCartView();
+    loadShoppingCartStorage(); */
 
     function updateContactInfoView() {
         const email = model.data.contactInfo.email;
